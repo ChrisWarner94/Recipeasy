@@ -10,9 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_06_163035) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_06_171415) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookmarks", force: :cascade do |t|
+    t.bigint "recipe_id", null: false
+    t.bigint "user_id", null: false
+    t.date "date"
+    t.text "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_bookmarks_on_recipe_id"
+    t.index ["user_id"], name: "index_bookmarks_on_user_id"
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "name"
+    t.text "description"
+    t.text "instruction"
+    t.string "prep_time"
+    t.string "diet_tag"
+    t.string "servings"
+    t.boolean "public"
+    t.text "ingredients"
+    t.text "video_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_recipes_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,4 +55,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_06_163035) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookmarks", "recipes"
+  add_foreign_key "bookmarks", "users"
+  add_foreign_key "recipes", "users"
 end
