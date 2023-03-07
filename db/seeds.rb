@@ -12,7 +12,6 @@ aisha = User.create(
   password: "123456"
 )
 
-
 recipe1 = Recipe.create!(
   user: aisha,
   name: "Carrot and lentil soup",
@@ -44,17 +43,13 @@ recipe1 = Recipe.create!(
 file = URI.open("https://img.taste.com.au/OkqqPCk0/taste/2016/11/quick-carrot-and-lentil-soup-108130-1.jpeg")
 recipe1.photo.attach(io: file, filename: "bolognese.png", content_type: "image/png")
 recipe1.save
-Recipe.destroy_all
-User.destroy_all
-puts "creating recipes..."
-
 
 user2 = User.create(
   email: "user2@gmail.com",
   password: "123456"
 )
 
- recipe2 = Recipe.create!(
+recipe2 = Recipe.create!(
   name: "Vegetable noodle pancake",
   description: "A complete meal in a frying pan, this easy vegetable and noodle pancake is great for lunch, brunch or dinner.
   ",
@@ -75,7 +70,6 @@ user2 = User.create(
   bunch spring onions, very thinly sliced
   2 tbsp vegetable oil
   chilli sauce or fruity brown sauce, to serve (optional)"
-
 )
 file = URI.open("https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/vegetable_noodle_pancake_22079_16x9.jpg")
 recipe2.photo.attach(io: file, filename: "bolognese.png", content_type: "image/png")
@@ -86,7 +80,6 @@ user3 = User.create(
   password: "123456"
 )
 
-
 recipe3 = Recipe.create!(
   user: user3,
   name: "Tomato, chickpea and pasta soup",
@@ -95,9 +88,9 @@ recipe3 = Recipe.create!(
   2. Stir in the chopped tomatoes, chicken stock and pasta shapes. Bring to the boil, then reduce the heat until the soup is just simmering.
   3. Cook the soup for 15 minutes, or until the pasta is tender.
   4. Check the seasoning, and serve finished with a generous drizzle of olive oil.",
-prep_time: "20 mins",
-servings: "3 peeple",
-ingredients: "1 tbsp extra virgin olive oil, plus extra for drizzling
+  prep_time: "20 mins",
+  servings: "3 peeple",
+  ingredients: "1 tbsp extra virgin olive oil, plus extra for drizzling
 2 large garlic cloves, thinly sliced
 400g tin chickpeas
 400g tin chopped tomatoes
@@ -114,8 +107,7 @@ user4 = User.create(
   password: "123456"
 )
 
-
- recipe4 = Recipe.create!(
+recipe4 = Recipe.create!(
   user: user4,
   name: "Persian noodle soup",
   description: "Herbs, pulses, noodles, spinach and soured cream combine in this Iranian comfort food dish, topped with deeply caramelised onions.",
@@ -141,10 +133,7 @@ user4 = User.create(
   20g/¾oz fresh coriander
   15g/½oz fresh mint
   2 x 250ml/9fl oz tubs soured cream"
-
 )
-
-
 file = URI.open("https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/persian_noodle_soup_76589_16x9.jpg")
 recipe4.photo.attach(io: file, filename: "bolognese.png", content_type: "image/png")
 recipe4.save
@@ -153,7 +142,7 @@ user5 = User.create(
   email: "user5@gmail.com",
   password: "123456"
 )
- recipe5 = Recipe.create!(
+recipe5 = Recipe.create!(
   user: user5,
   name: "Pizza expressed three ways",
   description: "You can either make the dough from scratch for this pizza, which takes no time at all, or for an even speedier method, buy soft tortillas and use these as a base for the pizza instead of making your own.",
@@ -233,7 +222,7 @@ recipe7 = Recipe.create!(
   prep_time: "35mins",
   diet_tag: "vegan",
   servings: "4 people",
-ingredients: "2 chicken breasts, approx. 120g/4½oz each
+  ingredients: "2 chicken breasts, approx. 120g/4½oz each
 6–8 tbsp olive oil, plus extra for drizzling
 1 onion, peeled and cut in half (optional)
 1 carrot (optional)
@@ -248,7 +237,6 @@ salt, to season"
 file = URI.open("https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/pesto_pasta_salad_72323_16x9.jpg")
 recipe7.photo.attach(io: file, filename: "bolognese.png", content_type: "image/png")
 recipe7.save
-
 
 user8 = User.create(
   email: "user8@gmail.com",
@@ -303,7 +291,6 @@ recipe9 = Recipe.create!(
   700g/1lb 10oz sweet potatoes, peeled and cubed
   1.2 litres/2 pints vegetable stock
   salt and freshly ground black pepper"
-
 )
 file = URI.open("https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/sweet_potato_soup_78003_16x9.jpg")
 recipe9.photo.attach(io: file, filename: "bolognese.png", content_type: "image/png")
