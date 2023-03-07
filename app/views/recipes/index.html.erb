@@ -6,20 +6,19 @@
       <button>hello</button>
     </div>
   </div>
-  <div class="cards">
-    <% @recipes.each do |recipe| %>
-      <div class="card-recipe">
-        <%= link_to recipe_path(recipe) do %>
-          <img src="<%recipe.video_url%>" />
-          <div class="card-recipe-infos">
-            <div>
-              <h2><%= recipe.name %></h2>
-              <p>Short description here!</p>
-            </div>
-            <h2 class="card-recipe-pricing">£99.99</h2>
+ <div class="cards">
+  <% @recipes.each do |recipe| %>
+    <div class="card-recipe">
+      <%= link_to recipe_path(recipe) do %>
+        <%= cl_image_tag recipe.photo.key, :crop=>"fit"%>
+        <div class="card-recipe-infos">
+          <div>
+            <h2><%= recipe.name %></h2>
+            <p><%= recipe.prep_time %></p>
           </div>
+          <h2 class="card-recipe-pricing"><%= recipe.servings %></h2>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   <% end %>
 </div>

@@ -4,7 +4,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-recipe > img {
+.card-recipe > card-image {
   height: 200px;
   width: 100%;
   object-fit: cover;
@@ -31,17 +31,11 @@
   position: relative;
 }
 
-.card-recipe-infos .card-recipe-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
-}
-
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  border-radius: 5px;
 }
 
 // Smallest device
