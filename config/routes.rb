@@ -8,4 +8,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :recipes do
+    resources :bookmarks, only: [:new, :create]
+    resources  :favorites, only: [:show, :new, :create]
+  end
+  get 'recipes/new1', to: 'recipes#new1'
 end
