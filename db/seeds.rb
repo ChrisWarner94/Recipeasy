@@ -89,7 +89,7 @@ recipe3 = Recipe.create!(
   3. Cook the soup for 15 minutes, or until the pasta is tender.
   4. Check the seasoning, and serve finished with a generous drizzle of olive oil.",
   prep_time: "20 mins",
-  servings: "3 peeple",
+  servings: "3 people",
   ingredients: "1 tbsp extra virgin olive oil, plus extra for drizzling
 2 large garlic cloves, thinly sliced
 400g tin chickpeas
@@ -158,7 +158,7 @@ recipe5 = Recipe.create!(
   For the feta, hummus and zucchini topping, spread the hummus over the base of the pizza and crumble the feta on top. 7. Use a vegetable peeler to slice the courgette into long thin strips. Keep going until all is used up and arrange these over also. Halve the tomatoes, scatter them over, and season.
   When you have topped the pizzas, bake each one in the oven for 8-10 minutes or until crispy and the sausage on the harissa, chilli and sausage pizza is cooked.
   8. Once cooked, scatter the rocket over the harissa, chilli and sausage pizza. Scatter the basil leaves over the cooked goats’ cheese pizza and drizzle with a little oil. Drizzle the balsamic glaze over the feta pizza with a good drizzle of olive oil, then scatter over the mint leaves. Serve the pizzas immediately.",
-  prep_time: "35mins",
+  prep_time: "35 mins",
   diet_tag: "vegan",
   servings: "4 people",
   ingredients: "For the pizza dough
@@ -191,7 +191,7 @@ recipe6 = Recipe.create!(
   instruction: "1. Half-fill a large saucepan with water, cover with a lid and bring to the boil. Stir in the pasta and return to the boil. Cover loosely with the lid, reduce the heat and simmer for 10–12 minutes, or until the pasta is tender but retains just a little ‘bite’. Stir occasionally as the pasta cooks, so it doesn’t stick.
   2. Meanwhile, cut the broccoli florets in half or quarters depending on size. After the pasta has been cooking for 8–10 minutes, add the broccoli and sweetcorn to the saucepan, cover and return to the boil. Cook for 2–3 minutes more, or until the broccoli is tender and the pasta cooked. Reserve a couple of ladles of the water (around 150ml/¼ pint) and put to one side in a bowl. Drain the pasta and vegetables in a colander then return to the pan.
   3. Pour the reserved water over the pasta, add the soft cheese and lemon zest and stir well until the cheese melts and coats the pasta. Sprinkle with half the cheddar and season with freshly ground black pepper. Toss together over a low heat until the cheddar melts into the sauce, adding a splash of water if needed. Sprinkle with the remaining cheese to serve.",
-  prep_time: "35mins",
+  prep_time: "35 mins",
   diet_tag: "vegan",
   servings: "4 people",
   ingredients: "300g/10½oz dried penne pasta, or other pasta shapes
@@ -219,7 +219,7 @@ recipe7 = Recipe.create!(
   3. While the chicken is cooking, make the pesto. If you are using a pestle and mortar, start by pounding the garlic and salt to a rough paste, then add the pine nuts, then basil, then oil, and pound to a consistency you like. Stir in the cheese to finish. If you are working in a food processor you can blend the garlic, salt, pine nuts, basil and oil all together, and once you have a consistency you like, stir in the cheese.
   Once the chicken is cooked, let it rest until cool enough to handle, then shred into a large mixing bowl and toss gently with the pesto.
   4. Bring a large pan of salted water to the boil, and boil the pasta until al dente. Drain the pasta, saving a cup of pasta cooking water. Combine the pasta with the chicken and pesto, and toss together, adding a bit of pasta water if it needs loosening. Serve.",
-  prep_time: "35mins",
+  prep_time: "35 mins",
   diet_tag: "vegan",
   servings: "4 people",
   ingredients: "2 chicken breasts, approx. 120g/4½oz each
@@ -250,7 +250,7 @@ recipe8 = Recipe.create!(
   3. Remove from the heat and add the hot milk, a few tablespoonfuls at a time, until it is incorporated and the sauce is smooth. Season with salt and pepper and the nutmeg. Return the saucepan to the heat and slowly bring the sauce to the boil, stirring all the time.
   4. Cook the pasta in a saucepan of boiling salted water according to the packet instructions. Cut the remaining butter into small pieces. Drain the pasta and mix in half the pieces of butter.
   5. Spoon 2–3 tablespoons of the béchamel into the prepared dish, cover with a third of the pasta, then half the salmon and half the Gruyère. Sprinkle with some of the Parmesan and breadcrumbs. Spread over some béchamel, then cover with half the remaining pasta and all the remaining salmon and Gruyère. Add the remaining pasta, finishing with a covering of béchamel. Sprinkle with the rest of the Parmesan and breadcrumbs and dot with the remaining pieces of butter.",
-  prep_time: "35mins",
+  prep_time: "35 mins",
   diet_tag: "vegan",
   servings: "4 people",
   ingredients: "750ml/1¼ pint full-fat milk
@@ -279,7 +279,7 @@ recipe9 = Recipe.create!(
   instruction: "1. Heat the oil in a large, lidded saucepan over a medium-high heat. Add the onion and carrots and cook until softened. Stir in the ginger, garlic and chilli flakes and fry for 2–3 minutes, or until fragrant.
   2. Stir in the sweet potatoes and stock. Turn up the heat and bring the pan to the boil. Reduce the heat to low and simmer with the lid on for 15 minutes, or until the sweet potato is tender.
   3. Remove the pan from the heat and blend the soup, using a stick blender, until smooth. Alternatively, tip it into a food processor and blend. Season to taste and serve.",
-  prep_time: "35mins",
+  prep_time: "35 mins",
   diet_tag: "vegan",
   servings: "4 people",
   ingredients: "1 tbsp olive oil
@@ -309,7 +309,7 @@ recipe10 = Recipe.create!(
   3. Tip in the tomatoes and stock. Cover with a lid and bring slowly to the boil. Reduce the heat to a simmer and cook for 15 minutes.
   4. Add the beans and pasta and cook for a further 10 minutes, or until the pasta is cooked. Add the cabbage and cook for another 2 minutes. If the soup is too thick, add some hot water to reach your preferred consistency.
   5. Season to taste with salt and pepper before serving.",
-  prep_time: "35mins",
+  prep_time: "35 mins",
   diet_tag: "vegan",
   servings: "4 people",
   ingredients: "1 tbsp olive oil
