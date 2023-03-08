@@ -14,9 +14,8 @@ class RecipesController < ApplicationController
     end
   end
 
-
   def index
-    @recipes = Recipe.all
+   @recipes = Recipe.all
     #implement PG search
   end
 
@@ -58,8 +57,11 @@ class RecipesController < ApplicationController
     params.require(:recipe).permit(:name, :video_url, :description, :public, :instruction, :prep_time, :diet_tag, :servings, :ingredients)
   end
 
+  def recipe_params2
+  end
 
-   def set_recipe
+  def set_recipe
+
     @recipe = Recipe.find(params[:id])
   end
 
