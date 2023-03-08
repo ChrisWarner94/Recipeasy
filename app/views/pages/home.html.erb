@@ -1,2 +1,84 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipeasy | World's best meal planning app | </title>
+  </head>
+
+                <%# Content of the Homepage %>
+  <body>
+    <div class="container">
+
+    <%# SECTION 1 - LANDING %>
+
+      <section id="one">
+
+        <div class="d-flex justify-content-between">
+          <div class="home-heading ">
+            <div >
+              <h1><strong>Meal planning </strong></h1>
+              <h1><strong>made easy</strong></h1>
+              <h1><strong>with Recipeasy.</strong></h1>
+              <p>Change your life today because eating healthy has never been easier.</p>
+            </div>
+              <div>
+                <%= link_to "Get started","#", :class => "btn btn-success btn-lg btn-block text-white" %>
+              </div>
+          </div>
+
+          <div>
+            <div>
+            <%= image_tag "homepage1.jpg", alt: "Recipeasy", class: "rounded", width: 500  %>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <%= link_to "#two" do %>
+            <i class="fa-solid fa-angle-down arrow"></i>
+          <% end %>
+        </div>
+      </section>
+
+      <%# SECTION 2 - REVIEWS %>
+
+      <section id="two">
+        <div class="home-middle">
+          <div class="" >
+            <h1><strong>What our clients say</strong></h1>
+          </div>
+          <div class="reviews d-flex">
+            <%= image_tag "review1.png", alt: "Review 1", class: "rounded", width: 600  %>
+            <%= image_tag "review2.png", alt: "Review 2", class: "rounded", width: 600  %>
+          </div>
+          <div class="">
+            <%= link_to "#three" do %>
+              <i class="fa-solid fa-angle-down arrow"></i>
+            <% end %>
+          </div>
+        </div>
+      </section>
+
+      <%# SECTION 3 - HOW IT WORKS %>
+
+      <section id="three">
+        <div class="home-end">
+
+          <div class="">
+           <h1><strong>How Recipeasy works</strong></h1>
+          </div>
+          <div class="placeholder-box">
+           <%= image_tag "placeholder.png", alt: "Review 1", class: "rounded", width: 800  %>
+          </div>
+          <div class="">
+            <%= link_to "#git " do %>
+              <i class="fa-solid fa-angle-up arrow"></i>
+            <% end %>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </body>
+</html>
