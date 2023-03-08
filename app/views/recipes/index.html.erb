@@ -1,14 +1,16 @@
 <div class="container">
   <div class="centered-text">
     <h1 class="styling-secondary">Meal planning made easy</h1>
-   <%= form_with url: recipes_path, method: :get, class: "d-flex" do %>
-  <%= text_field_tag :query,
+  </div>
+  <div class="search-bar">
+    <%= form_with url: recipes_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
     params[:query],
     class: "form-control",
     placeholder: "Find a recipe"
   %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
   </div>
   <div class="cards">
     <% @recipes.each do |recipe| %>
@@ -24,8 +26,8 @@
             <div class="recipe-details ">
               <i class="fa-solid fa-user logo-margin-bottom styling-secondary"></i>
               <i class="styling-primary"><%= recipe.servings %></i>
-                <i class="fa-solid fa-clock  styling-secondary"></i>
-                <i class="styling-primary"><%= recipe.prep_time %></i>
+              <i class="fa-solid fa-clock  styling-secondary"></i>
+              <i class="styling-primary"><%= recipe.prep_time %></i>
             </div>
           </div>
         <% end %>
