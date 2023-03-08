@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   get 'recipes/new1', to: 'recipes#new1'
+  get 'recipes/new2', to: 'recipes#new2'
   resources :recipes do
     resources :bookmarks, only: [:new, :create]
     resources  :favorites, only: [:show, :new, :create]
   end
-  get 'recipes/new2', to: 'recipes#new2'
 end

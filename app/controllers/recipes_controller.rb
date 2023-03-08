@@ -37,13 +37,10 @@ class RecipesController < ApplicationController
 
   def new1
     @recipe = Recipe.new
-    # @recipe.public? = false
-    # @recipe.save
   end
 
   def new2
-    # @recipe = Recipe.new(recipe_params2)
-    # @recipe.save
+     @recipe = Recipe.new
   end
 
 
@@ -64,6 +61,8 @@ class RecipesController < ApplicationController
   end
 
   def set_recipe
+
     @recipe = Recipe.find(params[:id])
   end
+
 end
