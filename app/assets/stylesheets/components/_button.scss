@@ -11,6 +11,8 @@
   display: flex;
   align-items: center;
   font-family: sans-serif;
+  font-weight: bold;
+  font-size: large;
 
   a {
     text-decoration: none;
@@ -22,5 +24,47 @@
 
 .btn-green:hover {
   background: $secondary-orange;
+  a {
+    color: black;
+}
+}
+
+
+.yellow-background {
+ background-color: #FFF5EE;
+ margin: 0px;
+ margin-right: 0px;
+ margin-left: 0px;
+
+}
+
+.btn-green-secondary {
+  background-color: $primary-green;
+  // color: white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  width: 250px;
+  text-align: center;
+  height: 50px;
+  margin: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: large;
   color: white;
+
+  a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    background-size: cover;
+  }
+}
+.btn-green-secondary:hover {
+  background: $secondary-orange;
+  a {
+    color: black;
+}
 }
