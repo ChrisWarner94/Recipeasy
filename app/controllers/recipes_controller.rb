@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  before_action :set_recipe, only: [:show, :edit, :update, :destroy]
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.user = current_user
@@ -62,5 +63,8 @@ class RecipesController < ApplicationController
 
   def recipe_params2
   end
-
+  
+   def set_recipe
+    @recipe = Recipe.find(params[:id])
+  end
 end
