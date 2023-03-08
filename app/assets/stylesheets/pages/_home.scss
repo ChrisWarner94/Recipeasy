@@ -1,1 +1,33 @@
-// Specific CSS for your home-page
+// Section 1
+
+.home-heading {
+  margin-top: 200px;
+  h1 {
+    font-size: 50px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+  a {
+    border-radius: 5px;
+  }
+}
+
+
+.one {
+  height: calc(100vh - 56.814px); //Section 1 display
+}
+
+// Section 2
+
+.home-middle {
+
+  h1{
+    font-size: 50px;
+  }
+}
+
+.two {
+  height: 100vh; // Section 2 display
+}
