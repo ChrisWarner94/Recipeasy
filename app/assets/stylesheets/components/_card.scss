@@ -1,13 +1,14 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  border-radius: 5px;
+}
+
 .card-recipe {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.card-recipe > card-image {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
 }
 
 .card-recipe h2 {
@@ -22,7 +23,6 @@
   margin: 0;
 }
 
-
 .card-recipe .card-recipe-infos {
   padding: 16px;
   display: flex;
@@ -31,11 +31,10 @@
   position: relative;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  border-radius: 5px;
+.card-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
 }
 
 // Smallest device
