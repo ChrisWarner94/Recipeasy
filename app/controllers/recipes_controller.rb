@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  before_action :set_recipe, only: [:show, :edit, :update, :destroy]
   def create
   end
 
@@ -20,5 +21,10 @@ class RecipesController < ApplicationController
   end
 
   def update
+  end
+  private
+
+  def set_recipe
+    @recipe = Recipe.find(params[:id])
   end
 end
