@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 pt-4 form-login">
+      <h1> Your imported Recipe </h1>
+      <%= simple_form_for(@recipe) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :video_url %>
+        <%= f.input :notes %>
+        <%= f.submit class:"btn-green-secondary"%>
+      <% end %>
+    </div>
+    <div class="col-6 p-0">
+      <img id="banner" src="https://res.cloudinary.com/dukmyo3cc/image/upload/w_517,ar_1:1,c_fill,g_auto,e_art:hokusai/v1678208787/shutterstock_1927957934.0_naatzp.jpg" alt="">
+    </div>
+  </div>
+</div>
