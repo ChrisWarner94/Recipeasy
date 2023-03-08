@@ -1,12 +1,11 @@
 <div class="container">
   <div class="centered-text">
-    <h1>Meal planning made easy</h1>
+    <h1 class="styling-secondary">Meal planning made easy</h1>
     <div class="d-flex search-bar centered">
       <input type="text" class="offset-left">
       <button>hello</button>
     </div>
   </div>
-
   <div class="cards">
     <% @recipes.each do |recipe| %>
       <div class="card-recipe">
@@ -15,11 +14,15 @@
             <%= cl_image_tag recipe.photo.key, crop: :fit%>
           </div>
           <div class="card-recipe-infos">
-            <div>
-              <h2 class="name-padding-bottom"><%= recipe.name %></h2>
+            <div class="recipe-title styling-primary">
+              <%= recipe.name %>
             </div>
-            <h6><i class="fa-solid fa-user logo-margin-bottom"></i> <%= recipe.servings %> <br>
-              <i class="fa-solid fa-clock"></i> <%= recipe.prep_time %> </h6>
+            <div class="recipe-details ">
+              <i class="fa-solid fa-user logo-margin-bottom styling-secondary"></i>
+              <i class="styling-primary"><%= recipe.servings %></i>
+                <i class="fa-solid fa-clock  styling-secondary"></i>
+                <i class="styling-primary"><%= recipe.prep_time %></i>
+            </div>
           </div>
         <% end %>
       </div>
