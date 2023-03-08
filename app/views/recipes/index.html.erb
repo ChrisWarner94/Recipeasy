@@ -6,7 +6,6 @@
       <button>hello</button>
     </div>
   </div>
-
   <div class="cards">
     <% @recipes.each do |recipe| %>
       <div class="card-recipe">
@@ -15,11 +14,13 @@
             <%= cl_image_tag recipe.photo.key, crop: :fit%>
           </div>
           <div class="card-recipe-infos">
-            <div>
-              <h2 class="name-padding-bottom"><%= recipe.name %></h2>
+            <div class="recipe-title">
+              <%= recipe.name %>
             </div>
-            <h6><i class="fa-solid fa-user logo-margin-bottom"></i> <%= recipe.servings %> <br>
-              <i class="fa-solid fa-clock"></i> <%= recipe.prep_time %> </h6>
+            <div class="recipe-details">
+            </div>
+            <!--<h6 class="styling"><i class="fa-solid fa-user logo-margin-bottom styling"></i><%= recipe.servings%> <br>
+              <i class="fa-solid fa-clock "></i>  <%= recipe.prep_time %></h6> -->
           </div>
         <% end %>
       </div>
