@@ -23,9 +23,9 @@
               <h1><strong>with Recipeasy.</strong></h1>
               <p>Change your life today because eating healthy has never been easier.</p>
             </div>
-            <div>
-            <%= link_to "Get started","#", :class => "btn btn-success btn-lg btn-block text-white" %>
-            </div>
+              <div>
+                <%= link_to "Get started","#", :class => "btn btn-success btn-lg btn-block text-white" %>
+              </div>
           </div>
 
           <div>
@@ -39,17 +39,19 @@
 
       <%# SECTION 2 - REVIEWS %>
 
-      <section class="two">
-        <div class="d-flex justify-content-center">
-          <div class="home-middle">
-          <div>
-          <h1><strong>What our clients say</strong></h1>
-          </div>
-          </div>
-        </div>
+  <section class="two">
+    <div class="home-middle">
+     <div class="d-flex justify-content-center" >
+        <h1><strong>What our clients say</strong></h1>
+      </div>
+      <div class="reviews d-flex justify-content-between">
+        <%= image_tag "review1.png", alt: "Review 1", class: "rounded", width: 600  %>
+        <%= image_tag "review2.png", alt: "Review 2", class: "rounded", width: 600  %>
+      </div>
+    </div>
 
 
-      </section>
+  </section>
 
       <%# SECTION 3 - HOW IT WORKS %>
 
