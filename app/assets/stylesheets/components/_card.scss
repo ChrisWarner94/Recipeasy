@@ -11,10 +11,24 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+.card-recipe a:hover{
+  overflow: hidden;
+  background: black;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+}
+
 .card-recipe h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  text-decoration: none;
+}
+
+.card-recipe h6 {
+text-decoration: none;
+justify-content: space-between;
+text-decoration: none;
 }
 
 .card-recipe p {
@@ -29,6 +43,7 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  text-decoration: none;
 }
 
 .card-image img {
