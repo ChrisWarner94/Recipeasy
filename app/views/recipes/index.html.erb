@@ -17,13 +17,12 @@
             <div class="recipe-title styling-primary">
               <%= recipe.name %>
             </div>
-            <div class="recipe-details">
-            <i class="fa-solid fa-user logo-margin-bottom styling-secondary"></i>
-            <i class="fa-solid fa-clock  styling-secondary"></i>
-            <!--<h6 class="styling"><i class="fa-solid fa-user logo-margin-bottom styling"></i><%= recipe.servings%> <br>
-              <i class="fa-solid fa-clock "></i>  <%= recipe.prep_time %></h6>-->
+            <div class="recipe-details ">
+              <i class="fa-solid fa-user logo-margin-bottom styling-secondary"></i>
+              <i class="styling-primary"><%= recipe.servings %></i>
+                <i class="fa-solid fa-clock  styling-secondary"></i>
+                <i class="styling-primary"><%= recipe.prep_time %></i>
             </div>
-
           </div>
         <% end %>
       </div>
