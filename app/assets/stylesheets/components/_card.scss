@@ -12,13 +12,6 @@
   border-radius: 5%;
 }
 
-.card-recipe a:hover{
-  overflow: hidden;
-  background: black;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-
-}
-
 .card-recipe h2 {
   font-size: 16px;
   font-weight: bold;
@@ -43,7 +36,12 @@ text-decoration: none;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
-  display: inline-block
+  display: inline-block;
+}
+
+.card-recipe-infos .recipe-details{
+  
+  display: inline-block;
 }
 
 .card-image img {
@@ -52,8 +50,11 @@ text-decoration: none;
   object-fit: cover;
 }
 
-.styling {
-  text-decoration: none;
+.styling-primary{
+ color: $primary-green;
+}
+.styling-secondary{
+color: $secondary-orange;
 }
 
 .recipe-title{
