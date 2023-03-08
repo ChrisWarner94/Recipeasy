@@ -1,21 +1,25 @@
 <div class="container">
   <div class="centered-text">
-    <h1>Eating healthy has never been easier</h1>
+    <h1>Meal planning made easy</h1>
     <div class="d-flex search-bar">
       <input type="text" class="offset-left">
       <button>hello</button>
     </div>
   </div>
+  
   <div class="cards">
     <% @recipes.each do |recipe| %>
       <div class="card-recipe">
         <%= link_to recipe_path(recipe) do %>
-          <%= cl_image_tag recipe.photo.key, :crop=>"fit"%>
+          <div class="card-image">
+            <%= cl_image_tag recipe.photo.key, crop: :fit%>
+          </div>
           <div class="card-recipe-infos">
             <div>
-              <h2><%= recipe.name %></h2>
+              <h2 class="name-padding-bottom"><%= recipe.name %></h2>
             </div>
-            <h2 class="card-recipe-pricing"><i class="fa-solid fa-user"></i> <%= recipe.servings %> <i class="fa-solid fa-clock"></i> <%= recipe.prep_time %> </h2>
+            <h6><i class="fa-solid fa-user logo-margin-bottom"></i> <%= recipe.servings %> <br>
+              <i class="fa-solid fa-clock"></i> <%= recipe.prep_time %> </h6>
           </div>
         <% end %>
       </div>
