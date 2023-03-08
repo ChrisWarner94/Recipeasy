@@ -14,9 +14,8 @@
           <div class="card-recipe-infos">
             <div>
               <h2><%= recipe.name %></h2>
-              <p><%= recipe.prep_time %></p>
             </div>
-            <h2 class="card-recipe-pricing"><%= recipe.servings %></h2>
+            <h2 class="card-recipe-pricing"><i class="fa-solid fa-user"></i> <%= recipe.servings %> <i class="fa-solid fa-clock"></i> <%= recipe.prep_time %> </h2>
           </div>
         <% end %>
       </div>

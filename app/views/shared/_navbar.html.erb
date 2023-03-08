@@ -3,24 +3,34 @@
     <%= link_to "#", class: "navbar-brand" do %>
       <%= image_tag "logo_transparent_cropped.png" %>
     <% end %>
-
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse centered" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto ">
         <% if user_signed_in? %>
-          <li class="nav-item active">
+          <li>
+            <i class="fa-regular fa-calendar-days icon-margin-top"></i>
+          </li>
+          <li class="nav-item active menu-margin-right">
             <%= link_to "Calendar", "#", class: "nav-link" %>
           </li>
-          <li class="nav-item">
+           <li>
+            <i class="fa-solid fa-bowl-food icon-margin-top"></i>
+          </li>
+          <li class="nav-item menu-margin-right">
             <%= link_to "Recipes", "recipes", class: "nav-link" %>
           </li>
-           <li class="nav-item active">
+           <li>
+            <i class="fa-solid fa-plus icon-margin-top"></i>
+          </li>
+          <li class="nav-item active menu-margin-right">
             <%= link_to "Add a recipe", "#", class: "nav-link" %>
           </li>
-           <li class="nav-item active">
+           <li>
+            <i class="fa-solid fa-carrot icon-margin-top"></i>
+          </li>
+          <li class="nav-item active menu-margin-right">
             <%= link_to "About us", "#", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
