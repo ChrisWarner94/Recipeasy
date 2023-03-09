@@ -13,16 +13,21 @@ class RecipesController < ApplicationController
   end
 
   def index
-    @recipes = Recipe.all
+    # @recipes = Recipe.all
 
-    return unless params[:query].present?
+    # return unless params[:query].present?
 
-    @recipes = @recipes.where("title ILIKE?", "%#{params[:query]}%")
-
+    if params[:query].present?
+      # @recipes = Recipe.where("name ILIKE ?", "%#{params[:query]}%")
+      @recipes = Recipe.search_by_name(params[:query])
+    else
+      @recipes = Recipe.all
+    end
   end
 
   def show
     @recipe = Recipe.find(params[:id])
+    @bookmark = Bookmark.new
   end
 
   def new
@@ -45,11 +50,10 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
   end
 
-  # def imported_recipes
-  #   if @recipe.public? == false
-  #    @recipe
-  #   end
-  # end
+  def imported_recipes
+       @recipes = current_user.recipes
+       @recipes = @recipes.select { |recipe| recipe.video_url }
+  end
 
   private
 
@@ -58,12 +62,10 @@ class RecipesController < ApplicationController
                                    :servings, :ingredients)
   end
 
-
   def recipe_params2
   end
 
   def set_recipe
-
     @recipe = Recipe.find(params[:id])
   end
 end

@@ -1,18 +1,25 @@
 <div class="container">
   <div class="row">
-    <div class="col-6 pt-4 form-login">
+    <div class="col-6 pt-4 form-login new-recipe-container" data-controller="recipe-form">
       <h1> Create your own unique recipe to share with the Recipeasy community! </h1>
       <%= simple_form_for(@recipe) do |f| %>
-        <%= f.input :name %>
-        <%= f.input :ingredients %>
-        <%= f.input :prep_time %>
-        <%= f.input :diet_tag %>
-        <%= f.input :description %>
-        <%= f.submit class:"btn-green-secondary"%>
+        <div id="form-start">
+          <%= f.input :name, placeholder: "pizza" %>
+          <%= f.input :ingredients %>
+          <%= f.input :prep_time %>
+        </div>
+        <div class="d-none" id="form-next">
+          <%= f.input :diet_tag %>
+          <%= f.input :description %>
+        </div>
+        <div class="d-none" id="form-submit-btn">
+          <%= f.submit class:"btn-green-secondary"%>
+        </div>
       <% end %>
+      <button class="btn-green-secondary" id="form-next-btn" data-action="click->recipe-form#changeForm">Next</button>
     </div>
     <div class="col-6 p-0">
-      <img id="banner" src="https://res.cloudinary.com/dukmyo3cc/image/upload/w_517,ar_1:1,c_fill,g_auto,e_art:hokusai/v1678208787/shutterstock_1927957934.0_naatzp.jpg" alt="">
+      <img id="banner" src="https://res.cloudinary.com/dukmyo3cc/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1678379501/RedPepperAnchovySpaghetti-copy-1dec261_i7c5h6.jpg" alt="">
     </div>
   </div>
 </div>

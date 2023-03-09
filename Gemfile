@@ -3,6 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
+# simple calendar used for calendar#show page
+gem "simple_calendar", "~> 2.4"
+
+# pg search as placeholder for Ajax search at a later date
+gem "pg_search"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 
