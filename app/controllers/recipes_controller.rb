@@ -27,6 +27,8 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    @bookmark = Bookmark.new
+
   end
 
   def new
