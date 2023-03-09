@@ -11,6 +11,10 @@ class BookmarksController < ApplicationController
     end
   end
 
+  def calendar
+    @bookmarks = Bookmark.all
+  end
+
   private
 
   def strong_params
