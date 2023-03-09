@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" id="navbar">
   <div class="container-fluid">
-    <%= link_to "recipes", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "Logo_Primary_Green.png"%>
     <% end %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +12,7 @@
           <i class="fa-regular fa-calendar-days icon-margin-top primary-colour"></i>
         </li>
         <li class="nav-item active menu-margin-right primary-colour">
-          <%= link_to "Calendar", "#", class: "nav-link" %>
+          <%= link_to "Calendar", calendar_path, class: "nav-link" %>
         </li>
         <li>
           <i class="fa-solid fa-bowl-food icon-margin-top primary-colour"></i>
@@ -24,7 +24,7 @@
           <i class="fa-solid fa-plus icon-margin-top primary-colour"></i>
         </li>
         <li class="nav-item active menu-margin-right primary-colour">
-          <%= link_to "Add a recipe", "#", class: "nav-link" %>
+          <%= link_to "Add a recipe", new_recipe_path , class: "nav-link" %>
         </li>
         <li>
           <i class="fa-solid fa-carrot icon-margin-top primary-colour"></i>
