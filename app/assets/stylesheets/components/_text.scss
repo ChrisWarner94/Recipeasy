@@ -23,3 +23,73 @@
 .margin{
   margin-top: 10px;
 }
+.show-button{
+  background-color: $primary-green;
+  text-decoration: none;
+  padding: 8px 8px;
+  border-radius: 50px;
+  width: 90px;
+  text-align: center;
+  height: 20px;
+  // margin: 50px;
+  // justify-content: center;
+  // display: flex;
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  color: white;
+  a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    background-size: cover;
+  }
+}
+
+.show-button:hover {
+  background: $secondary-orange;
+  a {
+    color: black;
+}
+}
+
+
+.yellow-background {
+ background-color: #FFF5EE;
+ margin: 0px;
+ margin-right: 0px;
+ margin-left: 0px;
+
+}
+
+.show-button-secondary {
+  background-color: $primary-green;
+  // color: white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  width: 250px;
+  text-align: center;
+  height: 50px;
+  margin: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: large;
+  color: white;
+
+  a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    background-size: cover;
+  }
+}
+.show-button:hover {
+  background: $secondary-orange;
+  a {
+    color: black;
+}
+}
