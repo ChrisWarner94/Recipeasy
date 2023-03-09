@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'recipes/new1', to: 'recipes#new1'
   get 'recipes/new2', to: 'recipes#new2'
   resources :recipes do
-    resources :bookmarks, only: [:new, :create]
+    resources :bookmarks, only: [:create]
     resources  :favorites, only: [:show, :new, :create]
   end
 end

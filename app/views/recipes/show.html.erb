@@ -20,3 +20,10 @@
   </div>
 </div>
 
+
+
+<%= simple_form_for([@recipe, @bookmark]) do |f| %>
+  <%= f.input :date, as: :date%>
+  <%= f.input :notes%>
+  <%= f.submit %>
+<% end %>
