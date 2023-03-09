@@ -13,12 +13,16 @@ class RecipesController < ApplicationController
   end
 
   def index
-    @recipes = Recipe.all
+    # @recipes = Recipe.all
 
-    return unless params[:query].present?
+    # return unless params[:query].present?
 
-    @recipes = @recipes.where("title ILIKE?", "%#{params[:query]}%")
-
+    if params[:query].present?
+      # @recipes = Recipe.where("name ILIKE ?", "%#{params[:query]}%")
+      @recipes = Recipe.search_by_name(params[:query])
+    else
+      @recipes = Recipe.all
+    end
   end
 
   def show
@@ -58,12 +62,10 @@ class RecipesController < ApplicationController
                                    :servings, :ingredients)
   end
 
-
   def recipe_params2
   end
 
   def set_recipe
-
     @recipe = Recipe.find(params[:id])
   end
 end
