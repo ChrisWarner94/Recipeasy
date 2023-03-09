@@ -1,12 +1,23 @@
 <h1> Your Imported Recipes Below </h1>
-<% @recipes.each do |recipe| %>
-  <%= link_to recipe_path(recipe) do %>
-    <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-product-infos">
-        <h2><%= recipe.name %></h2>
-        <p> <strong><%= recipe.notes %></strong></p>
-      </div>
+<div class="cards">
+  <% @recipes.each do |recipe| %>
+    <div class="card-recipe">
+      <%= link_to recipe_path(recipe) do %>
+        <div class="card-image">
+          <img id="imported_recipe" src= "https://res.cloudinary.com/dukmyo3cc/image/upload/v1678211216/oyakodon-japanese-chicken-and-egg-rice-bowl-recipe-hero-f2d42cfe8e8e4436b97d6e79d038d9bc_hfa1a5.jpg", crop: :fit%>
+        </div>
+        <div class="card-recipe-infos">
+          <div class="recipe-title styling-primary">
+            <%= recipe.name %>
+          </div>
+          <div class="recipe-details ">
+            <i class="fa-solid fa-user logo-margin-bottom styling-secondary"></i>
+            <i class="styling-primary"><%= recipe.name %></i>
+            <i class="fa-solid fa-clock  styling-secondary"></i>
+            <i class="styling-primary"><%= recipe.notes %></i>
+          </div>
+        </div>
+      <% end %>
     </div>
-    <% end %>
   <% end %>
+</div>
