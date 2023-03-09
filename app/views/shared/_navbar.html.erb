@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" id="navbar">
   <div class="container-fluid">
-    <%= link_to "recipes", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "Logo_Primary_Green.png"%>
     <% end %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +12,7 @@
           <i class="fa-regular fa-calendar-days icon-margin-top primary-colour"></i>
         </li>
         <li class="nav-item active menu-margin-right primary-colour">
-          <%= link_to "Calendar", "#", class: "nav-link" %>
+          <%= link_to "Calendar", calendar_path, class: "nav-link" %>
         </li>
         <li>
           <i class="fa-solid fa-bowl-food icon-margin-top primary-colour"></i>
@@ -24,7 +24,9 @@
           <i class="fa-solid fa-plus icon-margin-top primary-colour"></i>
         </li>
         <li class="nav-item active menu-margin-right primary-colour">
+
           <%= link_to "Add a recipe", new_recipe_path, class: "nav-link" %>
+
         </li>
         <li>
           <i class="fa-solid fa-carrot icon-margin-top primary-colour"></i>
@@ -35,24 +37,17 @@
       </ul>
     </div>
     <% if user_signed_in? %>
-      <div class="user-icon-spacing">
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown logo-margin-left">
-            <%= image_tag "Avatar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Account", "#", class: "dropdown-item" %>
-              <%= link_to "My imported recipes", recipes_imported_recipes_path, class: "dropdown-item" %>
-              <%= link_to "Night mode (maybe)", "#", class: "dropdown-item" %>
-              <%= link_to "Data Privacy", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-            </div>
-          </li>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
-          <ul>
-          <% end %>
+    <div class="user-icon-spacing">
+     <ul class="navbar-nav">
+      <li class="nav-item dropdown logo-margin-left">
+        <%= image_tag "Avatar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+          <%= link_to "Dashboard", dashboard_path, class: "dropdown-item" %>
+          <%= link_to "Help & Support", "#", class: "dropdown-item" %>
+          <%= link_to "Night mode (maybe)", "#", class: "dropdown-item" %>
+          <%= link_to "My imported recipes", recipes_imported_recipes_path, class: "dropdown-item" %>
+          <%= link_to "Data Privacy", "#", class: "dropdown-item" %>
+          <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
         </div>
       </div>
     </div>
