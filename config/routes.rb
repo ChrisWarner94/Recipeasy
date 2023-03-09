@@ -10,8 +10,10 @@ Rails.application.routes.draw do
   # root "articles#index"
   get 'recipes/new1', to: 'recipes#new1'
   get 'recipes/new2', to: 'recipes#new2'
+  get 'calendar', to: 'bookmarks#calendar'
+  get 'dashboard', to: 'pages#dashboard'
   resources :recipes do
-    resources :bookmarks, only: [:create]
+    resources :bookmarks, only: [:create, :show]
     resources  :favorites, only: [:show, :new, :create]
   end
   get 'dashboard', to: 'pages#dashboard'
