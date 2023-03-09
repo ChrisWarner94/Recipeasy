@@ -1,0 +1,50 @@
+<div class="container">
+
+            <%# Greeting the user %>
+
+ <div class="d-flex justify-content-center">
+    <h1>Hello <%= current_user.email %> </h1>
+ </div>
+
+  <div class="text- my4">
+    <h3>Your upcoming meals:</h3>
+  </div>
+
+              <%# Display upcoming meals %>
+
+  <div class="product-card-dash d-flex justify-content-between mx-5">
+    <% if @bookmarks.empty? %>
+      <p>Create some meals</p>
+    <% else %>
+      <% @bookmarks.each do |bookmark| %>
+
+    <div class="card-product-dash">
+    <%= cl_image_tag bookmark.recipe.photo.key%>
+    <div class="card-product-infos">
+        <h2><%= bookmark.recipe.name %></h2>
+        <p>Meal planned for: <strong><%= bookmark.date %></strong></p>
+      </div>
+    </div>
+
+      <% end %>
+    <% end %>
+  </div>
+              <%# Buttons %>
+
+  <div class="d-flex justify-content-around my-4 ">
+
+    <div>
+    <%= link_to "Calander", "#", class: "btn btn-success text-white rounded" %>
+    </div>
+
+    <div>
+    <%= link_to "Shopping List", "#", class: "btn btn-success text-white"  %>
+    </div>
+
+    <div>
+    <%= link_to "New Recipes", "#", class: "btn btn-success text-white" %>
+   </div>
+
+  </div>
+
+</div>

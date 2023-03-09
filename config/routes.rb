@@ -14,4 +14,6 @@ Rails.application.routes.draw do
     resources :bookmarks, only: [:create]
     resources  :favorites, only: [:show, :new, :create]
   end
+  get 'dashboard', to: 'pages#dashboard'
+  get 'recipes/new2', to: 'recipes#new2'
 end
