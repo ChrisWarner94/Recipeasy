@@ -13,10 +13,13 @@
 .btn-green {
   width: 200px;
   padding: 8px 24px;
-  background-color: rgb(6, 245, 161);
+  background-color: $primary-green;
   color: rgb(242, 249, 244);
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
 
+}
+.margin{
+  margin-top: 10px;
 }

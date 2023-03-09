@@ -23,6 +23,7 @@ footer {
   align-items: flex-start;
   padding: 10px;
   gap: 18px;
+  margin-top: 10px;
 
 width: 254px;
 height: 196px;
@@ -55,7 +56,7 @@ ul, li {
 
 
   a {
-    color: $green;
+    color: $primary-green;
     margin: 0px 10px;
   }
 }
