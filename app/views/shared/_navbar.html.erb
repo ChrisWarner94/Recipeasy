@@ -24,7 +24,9 @@
           <i class="fa-solid fa-plus icon-margin-top primary-colour"></i>
         </li>
         <li class="nav-item active menu-margin-right primary-colour">
-          <%= link_to "Add a recipe", new_recipe_path , class: "nav-link" %>
+
+          <%= link_to "Add a recipe", new_recipe_path, class: "nav-link" %>
+
         </li>
         <li>
           <i class="fa-solid fa-carrot icon-margin-top primary-colour"></i>
@@ -43,16 +45,9 @@
           <%= link_to "Dashboard", dashboard_path, class: "dropdown-item" %>
           <%= link_to "Help & Support", "#", class: "dropdown-item" %>
           <%= link_to "Night mode (maybe)", "#", class: "dropdown-item" %>
+          <%= link_to "My imported recipes", recipes_imported_recipes_path, class: "dropdown-item" %>
           <%= link_to "Data Privacy", "#", class: "dropdown-item" %>
           <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
         </div>
-      </li>
-    <% else %>
-      <li class="nav-item">
-        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-      </li>
-      <ul>
-    <% end %>
-</div>
-  </div>
-</div>
+      </div>
+    </div>

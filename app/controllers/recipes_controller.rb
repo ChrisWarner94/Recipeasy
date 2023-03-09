@@ -50,11 +50,10 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
   end
 
-  # def imported_recipes
-  #   if @recipe.public? == false
-  #    @recipe
-  #   end
-  # end
+  def imported_recipes
+       @recipes = current_user.recipes
+       @recipes = @recipes.select { |recipe| recipe.video_url }
+  end
 
   private
 

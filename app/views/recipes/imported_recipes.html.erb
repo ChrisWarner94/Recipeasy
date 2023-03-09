@@ -1,0 +1,12 @@
+<h1> Your Imported Recipes Below </h1>
+<% @recipes.each do |recipe| %>
+  <%= link_to recipe_path(recipe) do %>
+    <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <h2><%= recipe.name %></h2>
+        <p> <strong><%= recipe.notes %></strong></p>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
