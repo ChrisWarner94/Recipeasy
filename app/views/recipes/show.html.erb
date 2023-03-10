@@ -1,14 +1,21 @@
 <div class="container my-5">
 
-  <div class="d-flex justify-content-between" >
-    <% if @recipe.photo.attached? %>
-      <div class="image"> <%= cl_image_tag @recipe.photo.key, height: 600, width: 600, crop: :fit %> </div>
-    <% end %>
-    <div class="text-top">
-      <p><strong>name:</strong> <%=@recipe.name %></p>
-      <p><strong>description:</strong> <%= @recipe.description %></p>
+  <% if @recipe.video_url %>
+    <%# imported recipe %>
+    <h2>Your imported recipe</h2>
+    <%= @recipe.video_url %>
+  <% else %>
+
+    <%# created recipe %>
+    <div class="d-flex justify-content-between" >
+      <% if @recipe.photo.attached? %>
+        <div class="image"> <%= cl_image_tag @recipe.photo.key, height: 600, width: 600, crop: :fit %> </div>
+      <% end %>
+      <div class="text-top">
+        <p><strong>name:</strong> <%=@recipe.name %></p>
+        <p><strong>description:</strong> <%= @recipe.description %></p>
+      </div>
     </div>
-  </div>
 
   <div class="text">
     <p><strong>instruction:</strong> <%= @recipe.instruction %></p>
@@ -23,3 +30,17 @@
     <%= link_to "go back to recipes", recipes_path, class: 'show-button' %>
   </div>
 </div>
+
+  
+      
+ 
+  <% end %>
+
+
+
+<%= simple_form_for([@recipe, @bookmark]) do |f| %>
+  <%= f.input :date, as: :date%>
+  <%= f.input :notes%>
+  <%= f.submit %>
+<% end %>
+
