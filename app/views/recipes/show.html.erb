@@ -92,7 +92,7 @@ require 'simple-form-datepicker'
     <p><strong></strong> <i class="fa-solid fa-user logo-margin-bottom styling-primary">
     </i><i class="styling-secondary"> 4 </i> </p></p>
     <p><strong>ingredients</strong> <%= @recipe.ingredients %></p>
-    <%= link_to "go back to recipes", recipes_path, class: 'show-button' %>
+
   </div>
 </div>
 
@@ -107,8 +107,12 @@ require 'simple-form-datepicker'
       <%= simple_form_for([@recipe, @bookmark]) do |f| %>
         <%= f.input :meal_time, collection: Bookmark::MEAL_TIMES %>
         <%= f.input :notes%>
-        <%= f.submit 'add to your calender', class: "btn-green" %>
+        <div class="d-flex">
+        <%= f.submit 'add to your calender', class: "btn-green btn-show" %>
+        <%= link_to "go back to recipes", recipes_path, class: "show-button" %>
+        </div>
+
       <% end %>
+
   </div>
 </div>
-
