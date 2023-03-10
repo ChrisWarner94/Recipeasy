@@ -1,13 +1,10 @@
 <div class="container">
-  <%= week_calendar do |date| %>
+  <%= week_calendar(events: @bookmarks, attribute: :date) do |date, bookmarks| %>
     <%= date %>
-  <% end %>
-</div>
-<%= month_calendar(events: @bookmarks) do |date, bookmarks| %>
-  <%= date %>
-  <% bookmarks.each do |bookmark| %>
-    <div class="bookmark">  <-- We will add some style to the meeting class later so let's add it now -->
-        <p><%= @bookmark.recipe.name %></p>
+    <% bookmarks.each do |bookmark| %>
+      <div class="bookmark">
+        <p><%= bookmark.recipe.name %></p>
       </div>
     <% end %>
-  <% end %> 
+  <% end %>
+</div>
