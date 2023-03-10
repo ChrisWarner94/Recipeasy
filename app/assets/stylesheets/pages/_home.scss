@@ -12,6 +12,9 @@
   a {
     border-radius: 5px;
   }
+  .btn {
+    background-color: $primary-green;
+  }
 }
 
 
@@ -54,7 +57,7 @@ justify-content: space-between;
 }
 
 #three {
-  height: 100vh;
+  height: 100vh; // Section 3 display
 }
 
 .arrow  {

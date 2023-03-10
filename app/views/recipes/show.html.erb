@@ -1,3 +1,4 @@
+require 'simple-form-datepicker'
 <div class="container my-5">
   <% if @recipe.video_url %>
     <%# imported recipe %>
@@ -78,22 +79,36 @@
         <p><strong>description:</strong> <%= @recipe.description %></p>
       </div>
     </div>
-    <div class="text">
-      <p><strong>instruction:</strong> <%= @recipe.instruction %></p>
-      <p><strong>prep_time:</strong> <i class="fa-solid fa-clock  styling-primary"> 30</i>
-        <i class="styling-primary"></i>
-        <p><strong>diet_tag:</strong> <i class="fa-solid fa-seedling styling-primary"> vegan</i>
-        </p>
-        <p><strong>servings:</strong> <i class="fa-solid fa-user logo-margin-bottom styling-primary">
-          </i><i class="styling-primary"> 4 </i> </p>
-      </p>
-      <p><strong>ingredients</strong> <%= @recipe.ingredients %></p>
-      <%= link_to "go back to recipes", recipes_path, class: 'show-button' %>
-    </div>
+
+
+
+  <div class="text">
+    <p><strong>instruction:</strong> <%= @recipe.instruction %></p>
+
+    <p><strong></strong> <i class="fa-solid fa-clock  styling-secondary"> 30</i>
+    <i class="styling-primary"></i>
+    <p><strong></strong> <i class="fa-solid fa-seedling styling-secondary"> vegan</i>
+</p>
+    <p><strong></strong> <i class="fa-solid fa-user logo-margin-bottom styling-primary">
+    </i><i class="styling-secondary"> 4 </i> </p></p>
+    <p><strong>ingredients</strong> <%= @recipe.ingredients %></p>
+    <%= link_to "go back to recipes", recipes_path, class: 'show-button' %>
   </div>
-<% end %>
-<%= simple_form_for([@recipe, @bookmark]) do |f| %>
-  <%= f.input :date, as: :date, html5: true %>
-  <%= f.input :notes%>
-  <%= f.submit %>
-<% end %>
+</div>
+
+
+
+
+  <% end %>
+<div class="container"><h2>Add this recipe to your Calender</h2></div>
+
+<div class="container">
+  <div class="row justify-content-center">
+      <%= simple_form_for([@recipe, @bookmark]) do |f| %>
+        <%= f.input :meal_time, collection: Bookmark::MEAL_TIMES %>
+        <%= f.input :notes%>
+        <%= f.submit 'add to your calender', class: "btn-green" %>
+      <% end %>
+  </div>
+</div>
+

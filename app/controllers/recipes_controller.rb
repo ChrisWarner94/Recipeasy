@@ -51,8 +51,8 @@ class RecipesController < ApplicationController
   end
 
   def imported_recipes
-       @recipes = current_user.recipes
-       @recipes = @recipes.select { |recipe| recipe.video_url }
+    @recipes = current_user.recipes
+    @recipes = @recipes.select { |recipe| recipe.video_url }
   end
 
   private
