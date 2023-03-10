@@ -14,23 +14,25 @@
   </div>
   <div class="cards">
     <% @recipes.each do |recipe| %>
-      <div class="card-recipe">
-        <%= link_to recipe_path(recipe) do %>
-          <div class="card-image">
-            <%= cl_image_tag recipe.photo.key, crop: :fit%>
-          </div>
-          <div class="card-recipe-infos">
-            <div class="recipe-title styling-primary">
-              <%= recipe.name %>
+      <% if recipe.photo.attached? %>
+        <div class="card-recipe">
+          <%= link_to recipe_path(recipe) do %>
+            <div class="card-image">
+              <%= cl_image_tag recipe.photo.key, crop: :fit%>
             </div>
-            <div class="recipe-details ">
-              <i class="fa-solid fa-user logo-margin-bottom styling-secondary"></i>
-              <i class="styling-primary"><%= recipe.servings %></i>
-              <i class="fa-solid fa-clock  styling-secondary"></i>
-              <i class="styling-primary"><%= recipe.prep_time %></i>
+            <div class="card-recipe-infos">
+              <div class="recipe-title styling-primary">
+                <%= recipe.name %>
+              </div>
+              <div class="recipe-details ">
+                <i class="fa-solid fa-user logo-margin-bottom styling-secondary"></i>
+                <i class="styling-primary"><%= recipe.servings %></i>
+                <i class="fa-solid fa-clock  styling-secondary"></i>
+                <i class="styling-primary"><%= recipe.prep_time %></i>
+              </div>
             </div>
-          </div>
-        <% end %>
-      </div>
+          <% end %>
+        </div>
+      <% end %>
     <% end %>
   </div>

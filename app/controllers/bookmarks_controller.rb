@@ -1,4 +1,11 @@
 class BookmarksController < ApplicationController
+  def index
+    # Scoping the query to the dates being shown
+    start_date = params.fetch(:date, Date.today).to_date
+    # Weekly view
+    @bookmarks = Bookmark.where(starts_at: start_date.beginning_of_week..start_date.end_of_week)
+  end
+
   def create
     @bookmark = Bookmark.new(strong_params)
     @bookmark.recipe = Recipe.find(params[:recipe_id])
