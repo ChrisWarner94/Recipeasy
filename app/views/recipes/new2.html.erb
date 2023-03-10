@@ -4,13 +4,14 @@
       <h1> Create your own unique recipe to share with the Recipeasy community! </h1>
       <%= simple_form_for(@recipe) do |f| %>
         <div id="form-start">
-          <%= f.input :name, placeholder: "pizza" %>
-          <%= f.input :ingredients %>
-          <%= f.input :prep_time %>
+          <%= f.input :name, placeholder: "name of your recipe" %>
+          <%= f.input :ingredients, placeholder: "list your ingredients" %>
+          <%= f.input :prep_time, placeholder: "time needed to prepare" %>
         </div>
         <div class="d-none" id="form-next">
-          <%= f.input :diet_tag %>
-          <%= f.input :description %>
+          <%= f.input :diet_tag, placeholder: "classic, vegetarian, vegan, healthy, or pescatarian" %>
+           <%= f.input :description, placeholder: "provide a short description of your recipe" %>
+           <%= f.input :instruction, placeholder: "list all the instructions for preparing your recipe" %>
         </div>
         <div class="d-none" id="form-submit-btn">
           <%= f.submit class:"btn-green-secondary"%>
