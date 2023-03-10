@@ -1,7 +1,7 @@
 class BookmarksController < ApplicationController
   def index
 
-    for 
+    for
 
     # Scoping the query to the dates being shown
     start_date = params.fetch(:date, Date.today).to_date
@@ -13,6 +13,18 @@ class BookmarksController < ApplicationController
     @bookmark = Bookmark.new(strong_params)
     @bookmark.recipe = Recipe.find(params[:recipe_id])
     @bookmark.user = current_user
+
+    case (params(:meal_time))
+    when "Breakfast"
+       @bookmark.start_time = (strongparams[:date]), ""
+       @bookmark.end_time =
+    when  "lunch"
+      @bookmark.start_time =
+      @bookmark.end_time =
+    when  "dinner"
+      @bookmark.start_time =
+      @bookmark.end_time =
+    end
 
     if @bookmark.save
       redirect_to recipes_path
