@@ -1,3 +1,4 @@
+require 'simple-form-datepicker'
 <div class="container my-5">
 
   <% if @recipe.video_url %>
@@ -20,27 +21,29 @@
   <div class="text">
     <p><strong>instruction:</strong> <%= @recipe.instruction %></p>
 
-    <p><strong>prep_time:</strong> <i class="fa-solid fa-clock  styling-primary"> 30</i>
+    <p><strong></strong> <i class="fa-solid fa-clock  styling-secondary"> 30</i>
     <i class="styling-primary"></i>
-    <p><strong>diet_tag:</strong> <i class="fa-solid fa-seedling styling-primary"> vegan</i>
+    <p><strong>diet_tag:</strong> <i class="fa-solid fa-seedling styling-secondary"> vegan</i>
 </p>
     <p><strong>servings:</strong> <i class="fa-solid fa-user logo-margin-bottom styling-primary">
-    </i><i class="styling-primary"> 4 </i> </p></p>
+    </i><i class="styling-secondary"> 4 </i> </p></p>
     <p><strong>ingredients</strong> <%= @recipe.ingredients %></p>
     <%= link_to "go back to recipes", recipes_path, class: 'show-button' %>
   </div>
 </div>
 
-  
-      
- 
+
+
+
   <% end %>
+<h2>add this recipe to your calneder</h2>
 
-
-
-<%= simple_form_for([@recipe, @bookmark]) do |f| %>
-  <%= f.input :date, as: :date%>
-  <%= f.input :notes%>
-  <%= f.submit %>
-<% end %>
-
+<div class="container">
+  <div class="row justify-content-center">
+      <%= simple_form_for([@recipe, @bookmark]) do |f| %>
+        <%= f.input :meal_time, collection: Bookmark::MEAL_TIMES %>
+        <%= f.input :notes%>
+        <%= f.submit 'add to your calender', class: "btn-green" %>
+      <% end %>
+  </div>
+</div>

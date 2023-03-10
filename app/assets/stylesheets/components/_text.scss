@@ -93,3 +93,9 @@
     color: black;
 }
 }
+.styling-secondary {
+color: $primary-green;
+::target-text {
+ font-size: 10px;
+ }
+}
