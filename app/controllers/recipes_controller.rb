@@ -37,6 +37,9 @@ class RecipesController < ApplicationController
   end
 
   def destroy
+    @recipe = Recipe.find(params[:id])
+    @recipe.destroy
+    redirect_to recipes_imported_recipes_path
   end
 
   def update
@@ -51,7 +54,12 @@ class RecipesController < ApplicationController
   end
 
   def imported_recipes
-    @recipes = current_user.recipes
+    if params[:query].present?
+      # @recipes = Recipe.where("name ILIKE ?", "%#{params[:query]}%")
+      @recipes = current_user.recipes.search_by_name(params[:query])
+    else
+      @recipes = current_user.recipes
+    end
     @recipes = @recipes.select { |recipe| recipe.video_url }
   end
 
