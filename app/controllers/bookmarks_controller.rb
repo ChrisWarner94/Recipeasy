@@ -1,5 +1,8 @@
 class BookmarksController < ApplicationController
   def index
+
+    for 
+
     # Scoping the query to the dates being shown
     start_date = params.fetch(:date, Date.today).to_date
     # Weekly view
