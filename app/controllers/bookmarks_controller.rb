@@ -25,6 +25,6 @@ class BookmarksController < ApplicationController
   private
 
   def strong_params
-    params.require(:bookmark).permit(:date, :notes)
+    params.require(:bookmark).permit(:date, :notes, :meal_time)
   end
 end
