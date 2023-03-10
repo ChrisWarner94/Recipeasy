@@ -17,16 +17,25 @@
       </div>
     </div>
 
-    <div class="text">
-      <p><strong>instruction:</strong> <%= @recipe.instruction %></p>
-      <p><strong>prep_time:</strong> <%= @recipe.prep_time %></p>
-      <p><strong>diet_tag:</strong> <%= @recipe.diet_tag %></p>
-      <p><strong>servings:</strong> <%= @recipe.servings %></p>
-      <p><strong>ingredients</strong> <%= @recipe.ingredients %></p>
-      <%= link_to "go back to recipes", recipes_path, class: 'btn-green' %>
-    </div>
-  <% end %>
+  <div class="text">
+    <p><strong>instruction:</strong> <%= @recipe.instruction %></p>
+
+    <p><strong>prep_time:</strong> <i class="fa-solid fa-clock  styling-primary"> 30</i>
+    <i class="styling-primary"></i>
+    <p><strong>diet_tag:</strong> <i class="fa-solid fa-seedling styling-primary"> vegan</i>
+</p>
+    <p><strong>servings:</strong> <i class="fa-solid fa-user logo-margin-bottom styling-primary">
+    </i><i class="styling-primary"> 4 </i> </p></p>
+    <p><strong>ingredients</strong> <%= @recipe.ingredients %></p>
+    <%= link_to "go back to recipes", recipes_path, class: 'show-button' %>
+  </div>
 </div>
+
+  
+      
+ 
+  <% end %>
+
 
 
 <%= simple_form_for([@recipe, @bookmark]) do |f| %>
@@ -34,3 +43,4 @@
   <%= f.input :notes%>
   <%= f.submit %>
 <% end %>
+
