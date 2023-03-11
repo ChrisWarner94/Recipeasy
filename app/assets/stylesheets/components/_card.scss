@@ -5,6 +5,13 @@
 
 }
 
+.card-recipe:hover{
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    .card-image img{
+      width: 105%;
+    }
+}
+
 .card-recipe {
   overflow: hidden;
   background: white;
@@ -49,6 +56,7 @@ text-decoration: none;
   height: 150px;
   object-fit: cover;
 }
+
 
 .styling-primary-card{
  color: $primary-green;
