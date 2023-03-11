@@ -21,14 +21,14 @@
               <%= cl_image_tag recipe.photo.key, crop: :fit%>
             </div>
             <div class="card-recipe-infos">
-              <div class="recipe-title styling-primary">
+              <div class="recipe-title styling-primary-card">
                 <%= recipe.name %>
               </div>
               <div class="recipe-details ">
-                <i class="fa-solid fa-user logo-margin-bottom styling-secondary"></i>
-                <i class="styling-primary"><%= recipe.servings %></i>
-                <i class="fa-solid fa-clock  styling-secondary"></i>
-                <i class="styling-primary"><%= recipe.prep_time %></i>
+                <i class="fa-solid fa-user logo-margin-bottom styling-secondary-card"></i>
+                <i class="styling-primary-card"><%= recipe.servings %></i>
+                <i class="fa-solid fa-clock  styling-secondary-card"></i>
+                <i class="styling-primary-card"><%= recipe.prep_time %></i>
               </div>
             </div>
           <% end %>
