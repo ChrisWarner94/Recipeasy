@@ -48,7 +48,8 @@ text-decoration: none;
 
 .card-recipe-infos .recipe-details{
 
-  display: inline-block;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .card-image img {
@@ -68,6 +69,7 @@ color: $secondary-orange;
 .recipe-title{
   overflow: hidden;
   width: 95%;
+
 }
 
 .time-display{
