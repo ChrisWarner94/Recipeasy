@@ -1,0 +1,62 @@
+.simple-calendar {
+  table {
+    min-height: 20vh;
+  }
+  .today {
+    background-color: #FAF3DD;
+  }
+}
+
+.bookmark {
+  color: $secondary-orange;
+  padding: 4px;
+  border-radius: 4px;
+  background: $primary-green;
+  transition: background 0.3s ease;
+  font-size: 14px;
+  margin: 2px;
+}
+
+.bookmark:hover {
+  background: #1BCB7F;
+  color: white;
+}
+
+.nav-styling {
+  background-color: $secondary-orange !important;
+  color: rgba(0, 0, 0, 0.55);
+  border-radius: 10%;
+  margin-top: 2rem;
+  font-size: 12px;
+}
+
+.month-styling {
+  background-color: $primary-green !important;
+  color: rgba(0, 0, 0, 0.55);
+  border-radius: 10%;
+  margin-top: 2rem;
+}
+
+.calendar-key{
+  display: flex;
+
+  .breakfast{
+    color: blue;
+  }
+
+  .lunch{
+    color: chartreuse;
+  }
+
+  .dinner{
+    color: chocolate;
+  }
+
+  .other{
+    color: darkgreen;
+  }
+}
+
+.calendar-heading{
+  display: flex;
+}
