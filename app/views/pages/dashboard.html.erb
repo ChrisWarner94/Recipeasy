@@ -16,7 +16,7 @@
     <% if @bookmarks.empty? %>
       <p>Create some meals</p>
     <% else %>
-      <% @bookmarks.each do |bookmark| %>
+      <% @bookmarks.each do |bookmark| %>un
 
     <div class="card-product-dash">
     <%= cl_image_tag bookmark.recipe.photo.key%>
@@ -34,7 +34,7 @@
   <div class=" d-flex justify-content-around my-4 ">
 
     <div>
-    <%= link_to "Calander",calendar_path, class: " button btn  text-white rounded" %>
+    <%= link_to "Calandar",calendar_path, class: " button btn  text-white rounded" %>
     </div>
 
     <div>
