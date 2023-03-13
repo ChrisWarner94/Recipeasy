@@ -19,6 +19,12 @@ class BookmarksController < ApplicationController
     @bookmarks = Bookmark.where(date: start_date.beginning_of_week..start_date.end_of_week)
   end
 
+  def destroy
+    @bookmark = Bookmark.find(params[:id])
+    @bookmark.destroy
+    redirect_to calendar
+  end
+
   private
 
   def strong_params
