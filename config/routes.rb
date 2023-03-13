@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   get 'calendar', to: 'bookmarks#calendar'
   get 'dashboard', to: 'pages#dashboard'
+  get 'about_us', to: 'pages#about_us'
   resources :recipes do
     resources :bookmarks, only: [:create, :show , :delete]
     resources :favorites, only: [:show, :new, :create]
