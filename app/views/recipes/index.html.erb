@@ -10,9 +10,14 @@
       placeholder: "Find a recipe"
       %>
       <%= submit_tag "Search", class: "submit-styling" %>
+      <div class="search-instructions">
+        <i class="fa-solid fa-circle-info question-styling"></i>
+        <div class="on-hover-show-card">
+          <span>You can use our search function to base your search on a recipes Name, Catergory or Ingredients.
+          Please see the help and information page for a full list of catergories</span>
+        </div>
+      </div>
     <% end %>
-  </div>
-  <div class="flexbox">
   </div>
   <div class="cards">
     <% @recipes.each do |recipe| %>
@@ -32,8 +37,8 @@
                   <i class="styling-primary-card"><%= recipe.servings %></i>
                 </div>
                 <div class="timings">
-                <i class="fa-solid fa-clock  styling-secondary-card"></i>
-                <i class="styling-primary-card"><%= recipe.prep_time %></i>
+                  <i class="fa-solid fa-clock  styling-secondary-card"></i>
+                  <i class="styling-primary-card"><%= recipe.prep_time %></i>
                 </div>
               </div>
             </div>
