@@ -12,9 +12,10 @@ class RecipesController < ApplicationController
     end
   end
 
-  def index
-    # @recipes = Recipe.all
 
+  def index
+    @recipes = Recipe.all
+    @reviews = Review.all
     # return unless params[:query].present?
 
     if params[:query].present?
@@ -27,6 +28,8 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    @reviews = @recipe.reviews
+    @review = Review.new
     @bookmark = Bookmark.new
   end
 
@@ -70,10 +73,12 @@ class RecipesController < ApplicationController
                                    :servings, :ingredients, :notes, :date)
   end
 
+
   def recipe_params2
   end
 
   def set_recipe
     @recipe = Recipe.find(params[:id])
+
   end
 end

@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
   get 'about_us', to: 'pages#about_us'
   resources :recipes do
+    resources :reviews, only: [:create, :new]
     resources :bookmarks, only: [:create, :show]
     resources :favorites, only: [:show, :new, :create]
 
