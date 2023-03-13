@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get 'about_us', to: 'pages#about_us'
   resources :recipes do
     resources :bookmarks, only: [:create, :show]
-    resources  :favorites, only: [:show, :new, :create]
+    resources :favorites, only: [:show, :new, :create]
 
   end
 end
