@@ -298,7 +298,7 @@ recipe9.save
 
 user10 = User.create(
   email: "user10@gmail.com",
-  password: "123456")
+  password: "")
 
 recipe10 = Recipe.create!(
   user: user10,
