@@ -7,4 +7,7 @@ class PagesController < ApplicationController
   def dashboard
     @bookmarks = current_user.bookmarks
   end
+
+  def about_us
+  end
 end
