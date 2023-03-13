@@ -1,0 +1,75 @@
+
+.container_one {
+
+  padding: 100px;
+  text-align: center;
+  .h1 {
+    font-weight: bold;
+    font-size:larger;
+  }
+
+}
+
+
+
+.blue_background {
+
+  background-color: #F0FFFF;
+  padding: 100px;
+  text-align: center;
+
+}
+
+
+.final_container {
+
+  padding: 100px;
+  text-align: center;
+
+}
+
+.paragraph {
+
+  margin-right: 250px;
+  margin-left: 250px;
+  text-align: justify;
+  margin-top: 50px;
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+}
+
+#Alia {
+  text-align: justify;
+  margin-right: 20px;
+}
+
+
+#Chris {
+  text-align: justify;
+  margin-right: 20px;
+}
+
+#Aisha {
+  text-align: justify;
+  margin-right: 20px;
+}
+
+#Simon {
+  text-align: justify;
+  margin-right: 20px;
+}
+
+.team_avatar {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  vertical-align: middle;
+}
+
+.team_header {
+
+margin-bottom: 50px;
+}
