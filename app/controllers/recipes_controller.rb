@@ -12,6 +12,7 @@ class RecipesController < ApplicationController
     end
   end
 
+
   def index
     # @recipes = Recipe.all
 
@@ -27,6 +28,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    @review = @recipe.reviews
     @bookmark = Bookmark.new
   end
 

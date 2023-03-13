@@ -97,6 +97,12 @@
         </div>
 
       <% end %>
+<h3 >Add review</h3>
+<%= simple_form_for([@recipe, @review]) do |f| %>
+        <%= f.input :comment %>
+        <%= f.input :rating %>  <%= form.select :rating, ⭐ %><br>
+        <%= form.submit "Submit Review" %>
+<% end %>
 
 
   </div>
