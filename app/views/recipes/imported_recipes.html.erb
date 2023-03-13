@@ -1,0 +1,35 @@
+<h1 class="styling-secondary">My Cookbook</h1>
+<div class="search-bar">
+  <%= form_with url: recipes_imported_recipes_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Search your recipes"
+      %>
+    <%= submit_tag "Search", class: "submit-styling" %>
+  <% end %>
+</div>
+<div class="cards">
+  <% @recipes.each do |recipe| %>
+    <div class="card-recipe">
+      <%= link_to recipe_path(recipe) do %>
+        <div class="card-image">
+          <img id="imported_recipe" src= "https://res.cloudinary.com/dukmyo3cc/image/upload/v1678211216/oyakodon-japanese-chicken-and-egg-rice-bowl-recipe-hero-f2d42cfe8e8e4436b97d6e79d038d9bc_hfa1a5.jpg", crop: :fit%>
+        </div>
+        <div class="card-recipe-infos">
+          <div class="recipe-title styling-primary">
+            <%= recipe.name %>
+          </div>
+          <div class="recipe-details ">
+            <%# <i class="styling-primary"><%= recipe.name %></i>
+          <i class="fa-solid fa-note-sticky styling-primary"></i>
+          <i class="styling-primary"><%= recipe.notes %></i>
+          <%= link_to recipe_path(recipe), data: { turbo_method: "delete", confirm: "Are you sure?" } do %>
+            <i class="fa-solid fa-trash styling-primary"></i>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+</div>

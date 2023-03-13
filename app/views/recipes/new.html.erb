@@ -1,2 +1,17 @@
-<h1>Recipes#new</h1>
-<p>Find me in app/views/recipes/new.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-6 pt-4">
+      <h1>What would you like to do today?</h1>
+      <p> Populating your recipes bank has never been easier. Add new recipes from other websites or create your own unique recipe to share with our community! </p>
+      <div class="btn-green">
+        <%= link_to "Import a Recipe", recipes_new1_path %>
+      </div>
+      <div class="btn-green">
+        <%= link_to "Create a Recipe", recipes_new2_path %>
+      </div>
+    </div>
+    <div class="col-6 p-0">
+      <img id="banner" src="https://res.cloudinary.com/dukmyo3cc/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1678380213/iStock_58717870_XLARGE_yb4wik.jpg" alt="">
+    </div>
+  </div>
+</div>
