@@ -16,6 +16,7 @@ class RecipesController < ApplicationController
   def index
     @recipes = Recipe.all
     @reviews = Review.all
+
     # return unless params[:query].present?
 
     if params[:query].present?
