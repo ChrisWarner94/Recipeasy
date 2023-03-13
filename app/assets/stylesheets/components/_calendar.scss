@@ -67,3 +67,13 @@
 .calendar-heading{
   display: flex;
 }
+
+.delete{
+  align-items: right;
+}
+
+.bottom-info{
+  display: flex;
+  justify-content: space-between;
+  line-height: 0;
+}

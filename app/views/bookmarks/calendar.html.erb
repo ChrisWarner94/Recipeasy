@@ -5,7 +5,12 @@
       <%= link_to recipe_path(bookmark.recipe) do %>
         <div class="bookmark" data-controller="calendar-bookmark" data-action="click->calendar-bookmark#renderShow">
           <p><%= bookmark.recipe.name %></p>
-          <i class="fa-solid fa-clock  styling-secondary-card"><%= bookmark.recipe.prep_time%></i>
+          <div class="bottom-info">
+            <i class="fa-solid fa-clock  styling-secondary-card"><%= bookmark.recipe.prep_time%></i>
+            <div class="delete">
+              <i class="fa-solid fa-trash-can"></i>
+            </div>
+          </div>
         </div>
       <% end %>
     <% end %>
