@@ -2,7 +2,7 @@
   <%= week_calendar(events: @bookmarks, attribute: :date) do |date, bookmarks| %>
     <%= date %>
     <% bookmarks.each do |bookmark| %>
-      <div class="bookmark">
+      <div class="bookmark" data-controller="calendar-bookmark" data-action="click->calendar-bookmark#renderShow">
         <p><%= bookmark.recipe.name %></p>
         <i class="fa-solid fa-clock  styling-secondary-card"><%= bookmark.recipe.prep_time%></i>
       </div>
