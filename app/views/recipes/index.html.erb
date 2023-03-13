@@ -9,6 +9,7 @@
       class: "form-control",
       placeholder: "Find a recipe"
       %>
+      <%= f.select :diet_tag, @recipes.map {|r| r.diet_tag} %>
       <%= submit_tag "Search", class: "submit-styling" %>
     <% end %>
   </div>
