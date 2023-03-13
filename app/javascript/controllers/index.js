@@ -10,5 +10,3 @@ application.register("hello", HelloController)
 import RecipeFormController from "./recipe_form_controller"
 application.register("recipe-form", RecipeFormController)
 
-import CalendarBookmarkController from "./calendar_bookmark_controller"
-application.register("calendar-bookmark", CalendarBookmarkController)
