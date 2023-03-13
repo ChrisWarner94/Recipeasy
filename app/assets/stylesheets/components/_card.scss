@@ -40,10 +40,10 @@ text-decoration: none;
 .card-recipe .card-recipe-infos {
   padding: 16px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
   position: relative;
-  display: inline-block;
+  // display: inline-block;
 }
 
 .card-recipe-infos .recipe-details{

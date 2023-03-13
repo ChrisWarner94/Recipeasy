@@ -24,7 +24,7 @@
   margin-top: 5px;
 }
 .show-button{
-  background-color: $primary-green;
+  background-color: $secondary-orange;
   text-decoration: none;
   padding: 8px 15px;
   border-radius: 50px;
@@ -48,7 +48,7 @@
 }
 
 .show-button:hover {
-  background: $secondary-orange;
+  background: $primary-green;
   color: rgb(249, 247, 247);
 
 }
@@ -116,4 +116,7 @@ color: $primary-green;
 }
 .text-style{
   margin-top: 10px;
+}
+h3 {
+  font-family: "Lucida Console", "Courier New", monospace;
 }

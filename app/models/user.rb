@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :bookmarks
   has_one_attached :photo
   has_many :recipes
+  has_many :reviews
 end

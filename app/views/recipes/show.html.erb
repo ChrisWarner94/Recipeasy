@@ -69,14 +69,26 @@
         <%= f.input :meal_time, collection: Bookmark::MEAL_TIMES %>
         <%= f.input :notes%>
         <%= f.input :date%>
-        <div class="d-flex">
+        <div class="d-flex justify-content-between">
         <%= f.submit 'add to your calender', class: "btn-green btn-show" %>
         <%= link_to "go back to recipes", recipes_path, class: "show-button" %>
         </div>
 
       <% end %>
+<h3>Add review</h3>
+<%= simple_form_for([@recipe, @review]) do |f| %>
+        <%= f.input :comment %>
+        <%= f.input :rating, collection: (1..5).to_a, label: "Rate your experience", input_html: {data: {controller: "star-rating"}} %>
+        <%= f.submit "Submit Review", class: "btn-green btn-show" %>
+<% end %>
 
-
+    <ul class="list-group list-group-flush">
+          <% @recipe.reviews.each do |review| %>
+          <li class="list-group-item">
+          <p><%= '⭐️' * review.rating %></p>
+          <p><%= review.comment %></p>
+          </li>
+        <% end %>
   </div>
 </div>
         </div>
