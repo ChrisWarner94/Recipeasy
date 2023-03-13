@@ -58,39 +58,17 @@
     <%# created recipe %>
     <div class="d-flex justify-content-between" >
       <% if @recipe.photo.attached? %>
-        <div class="image"> <%= cl_image_tag @recipe.photo.key, height: 600, width: 600, crop: :fit %> </div>
-      <% end %>
-      <div class="text-top">
-        <p><strong>name:</strong> <%=@recipe.name %></p>
-        <p><strong>description:</strong> <%= @recipe.description %></p>
-      </div>
-    </div>
-
-
-
-  <div class="text">
-    <p><strong>instruction:</strong> <%= @recipe.instruction %></p>
-
-    <p><strong></strong> <i class="fa-solid fa-clock  styling-secondary"> 30</i>
-    <i class="styling-primary"></i>
-    <p><strong></strong> <i class="fa-solid fa-seedling styling-secondary"> vegan</i>
-</p>
-    <p><strong></strong> <i class="fa-solid fa-user logo-margin-bottom styling-primary">
-    </i><i class="styling-secondary"> 4 </i> </p></p>
-    <p><strong>ingredients</strong> <%= @recipe.ingredients %></p>
-
-
-  </div>
-<% end %>
-<div class="container">
-  <h2>Add this recipe to your Calender</h2>
-</div>
+        <div class="image"> <%= cl_image_tag @recipe.photo.key, height: 650, width: 650, crop: :fit %>
+        <div class="text-style">
+          <h2 style="font-size:3vw">Add this recipe to your Calender</h2>
+       </div>
 <div class="container">
   <div class="row justify-content-center">
 
       <%= simple_form_for([@recipe, @bookmark]) do |f| %>
         <%= f.input :meal_time, collection: Bookmark::MEAL_TIMES %>
         <%= f.input :notes%>
+        <%= f.input :date%>
         <div class="d-flex">
         <%= f.submit 'add to your calender', class: "btn-green btn-show" %>
         <%= link_to "go back to recipes", recipes_path, class: "show-button" %>
@@ -107,3 +85,26 @@
 
   </div>
 </div>
+        </div>
+      <% end %>
+      <div class="text-top">
+        <p style="font-size:4vw"><strong></strong> <%=@recipe.name %></p>
+        <p><strong></strong> <i class="fa-solid fa-clock  styling-secondary"> 30</i>
+    <i class="styling-primary"></i>
+    <p><strong></strong> <i class="fa-solid fa-seedling styling-secondary"> vegan</i>
+    </p>
+    </i>
+    <i class="fa-solid fa-user logo-margin-bottom styling-primary-card"> 4 </i> </p></p>
+        <p><strong>description</strong></p>
+        <p> <%= @recipe.description %></p>
+        <p><strong>instruction</strong></p>
+        <p><%= @recipe.instruction %></p>
+        <div class="text">
+
+    <p><strong>ingredients</strong> <%= @recipe.ingredients %></p>
+  </div>
+      </div>
+    </div>
+
+
+<% end %>
