@@ -328,6 +328,36 @@ recipe10 = Recipe.create!(
 file = URI.open("https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/minestrone_23211_16x9.jpg")
 recipe10.photo.attach(io: file, filename: "bolognese.png", content_type: "image/png")
 recipe10.save
+recipe11 = Recipe.create!(
+  user: User11,
+  name: "Vegan cabbage cacciatore",
+  description: "Viva Italia! That unmistakable trio of tomato, basil and mozzarella meets olives, peppers, pesto and chicken-infused rice for a bolstering midweek dinner.",
+  diet_tag: "gluten free",
+  servings: "3 people",
+  instruction:"1.Remove any damaged outer leaves from the cabbage, wash to remove any dirt and slice into 4 wedges. Put a large lidded saucepan over a high heat and, once smoking, add a drizzle of vegetable oil and the cabbage wedges, cut-side down. Cook for a few minutes until nicely charred, then flip to char the other cut side for another few minutes. Remove and set aside.
+  2.Add another drizzle of oil to the pan, turn down the heat to medium, then add the onions, celery, red pepper and garlic and cook for 6 minutes until soft. Stir in the tomato purée and cook for 2 minutes.
+  3. Nestle the cabbage wedges back into the pan then pour in the wine. Simmer until reduced by half (about 4 minutes) then add 200g water, the tinned tomatoes, mushrooms, rosemary, oregano, olives and capers and season with salt and pepper. Cover and simmer for 20 minutes, until the sauce has thickened slightly and you can insert a knife into the thick stem of a cabbage wedge with little resistance. Serve scattered with chopped parsley or basil.",
+  ingredients: "1 medium savoy cabbage
+  Olive oil to fry
+  1 onion, sliced
+  1 celery stick, sliced
+  1 red pepper, deseeded and chopped into 2cm pieces
+  4 garlic cloves, sliced
+  2 tbsp tomato purée
+  150ml red wine
+  400g tin chopped tomatoes
+  150g button mushrooms
+  1 sprig of rosemary
+  1 tsp dried oregano
+  50g black olives
+  1 tbsp capers
+  Handful parsley or basil, chopped"
+
+)
+file = URI.open("https://www.deliciousmagazine.co.uk/wp-content/uploads/2022/11/2022D467-Cabbage-Cacciatore-768x960.jpg")
+recipe11.photo.attach(io: file, filename: "bolognese.png", content_type: "image/png")
+recipe11.save
+
 # # require 'open-uri'
 # # require 'nokogiri'
 
