@@ -4,8 +4,17 @@
 
 import { application } from "./application"
 
+import CalendarBookmarkController from "./calendar_bookmark_controller"
+application.register("calendar-bookmark", CalendarBookmarkController)
+
+import FormSubmitController from "./form_submit_controller"
+application.register("form-submit", FormSubmitController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
 import RecipeFormController from "./recipe_form_controller"
 application.register("recipe-form", RecipeFormController)
+
+import StarRatingController from "./star_rating_controller"
+application.register("star-rating", StarRatingController)

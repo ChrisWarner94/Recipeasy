@@ -8,11 +8,27 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
+    @review.user = current_user
+    @recipe = Recipe.find(params[:recipe_id])
     @review.recipe = @recipe
+    @bookmark = Bookmark.new
+
     if @review.save
+      if @recipe.rating
+        avg_rating = @recipe.rating
+      else
+        avg_rating = 0
+      end
+      total_rating = avg_rating * (@recipe.reviews.count - 1)
+      avg_rating = (total_rating + @review.rating) / (@recipe.reviews.count)
+
+      @recipe.rating = avg_rating
+      @recipe.save
+
       redirect_to recipe_path(@recipe)
     else
-      render :new, status: :unprocessable_entity
+      flash[:alert] = "Something went wrong."
+      render "recipes/show"
     end
   end
 
@@ -30,7 +46,7 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:content)
+    params.require(:review).permit(:comment, :rating)
   end
 
 end

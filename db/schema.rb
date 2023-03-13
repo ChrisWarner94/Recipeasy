@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_13_102801) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_13_170138) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_102801) do
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
+
   create_table "active_storage_blobs", force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
@@ -68,6 +69,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_102801) do
     t.datetime "updated_at", null: false
     t.string "url"
     t.string "notes"
+    t.float "rating"
     t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 
@@ -77,7 +79,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_102801) do
     t.bigint "recipe_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
     t.index ["recipe_id"], name: "index_reviews_on_recipe_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -90,7 +94,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_102801) do
     t.datetime "updated_at", null: false
     t.string "profile_picture"
     t.string "user_name"
-    t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -101,4 +104,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_102801) do
   add_foreign_key "bookmarks", "users"
   add_foreign_key "recipes", "users"
   add_foreign_key "reviews", "recipes"
+  add_foreign_key "reviews", "users"
 end
