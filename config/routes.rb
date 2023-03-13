@@ -21,4 +21,5 @@ Rails.application.routes.draw do
     resources :favorites, only: [:show, :new, :create]
 
   end
+  resources :bookmarks, only: [:destroy]
 end
