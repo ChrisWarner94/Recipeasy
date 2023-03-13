@@ -4,6 +4,7 @@
     <% bookmarks.each do |bookmark| %>
       <div class="bookmark">
         <p><%= bookmark.recipe.name %></p>
+        <i class="fa-solid fa-clock  styling-secondary-card"><%= bookmark.recipe.prep_time%></i>
       </div>
     <% end %>
   <% end %>
