@@ -17,14 +17,10 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all
     @reviews = Review.all
 
-    # return unless params[:query].present?
-
     if params[:query].present?
-      # @recipes = Recipe.where("name ILIKE ?", "%#{params[:query]}%")
-      @recipes = Recipe.search_by_name(params[:query])
-    else
-      @recipes = Recipe.all
+      @recipes = Recipe.where("name ILIKE ?", "%#{params[:query]}%")
     end
+    respond_to
   end
 
   def show
