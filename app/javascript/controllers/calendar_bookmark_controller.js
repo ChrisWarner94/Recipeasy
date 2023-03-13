@@ -10,5 +10,6 @@ export default class extends Controller {
 
   renderShow() {
     console.log("working")
+    fetch()
   }
 }
