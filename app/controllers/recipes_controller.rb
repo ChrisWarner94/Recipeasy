@@ -20,7 +20,10 @@ class RecipesController < ApplicationController
     if params[:query].present?
       @recipes = Recipe.where("name ILIKE ?", "%#{params[:query]}%")
     end
-    respond_to
+    respond_to do |format|
+      format.html
+      format.text {render "index", locals: {recipes: @recipes}, formats: [:html]}
+    end
   end
 
   def show
