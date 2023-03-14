@@ -19,38 +19,5 @@
         </div>
       </div>
   </div>
-  <div class="cards" data-search-recipes-target="list">
-    <% @recipes.each do |recipe| %>
-      <% if recipe.photo.attached? %>
-        <div class="card-recipe">
-          <%= link_to recipe_path(recipe) do %>
-            <div class="card-image">
-              <%= cl_image_tag recipe.photo.key, crop: :fit%>
-            </div>
-            <div class="card-recipe-infos">
-              <div class="recipe-title styling-primary-card">
-                <%= recipe.name %>
-                <i class=" icon-star "></i>
-                <% if recipe.rating %>
-                  <%= '⭐️' * recipe.rating %>
-                <% else %>
-                  <p>no rating yet</p>
-                <% end %>
-              </div>
-              <div class="recipe-details">
-                <div class="servings">
-                  <i class="fa-solid fa-user logo-margin-bottom styling-secondary-card"></i>
-                  <i class="styling-primary-card"><%= recipe.servings %></i>
-                </div>
-                <div class="timings">
-                  <i class="fa-solid fa-clock  styling-secondary-card"></i>
-                  <i class="styling-primary-card"><%= recipe.prep_time %></i>
-                </div>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
+  <%= render "search_results" , recipes: @recipes %>
 </div>
