@@ -1,6 +1,7 @@
 <div class="container">
   <div class="centered-text" data-controller="search-recipes">
     <h1 class="styling-secondary-card">Meal planning made easy</h1>
+  </div>
     <div>
       <%= form_with url: recipes_path, method: :get, html: {class:
         "mb-4", data: {search_recipes_target: "form"}} do |f| %>
@@ -29,14 +30,8 @@
             </div>
             <div class="card-recipe-infos">
               <div class="recipe-title styling-primary-card">
+              <div class="line">
                 <%= recipe.name %>
-                <i class=" icon-star "></i>
-                <% if recipe.rating %>
-                  <%= '⭐️' * recipe.rating %>
-                <% else %>
-                  <p>no rating yet</p>
-                <% end %>
-              </div>
               <div class="recipe-details">
                 <div class="servings">
                   <i class="fa-solid fa-user logo-margin-bottom styling-secondary-card"></i>
@@ -46,11 +41,18 @@
                   <i class="fa-solid fa-clock  styling-secondary-card"></i>
                   <i class="styling-primary-card"><%= recipe.prep_time %></i>
                 </div>
+                <i class=" icon-star "></i>
+                <% if recipe.rating %>
+                  <%= '⭐️' * recipe.rating %>
+                <% else %>
+                  <p>no rating yet</p>
+                <% end %>
+              </div>
+              </div>
               </div>
             </div>
           <% end %>
         </div>
       <% end %>
     <% end %>
-  </div>
 </div>
