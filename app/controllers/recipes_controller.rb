@@ -12,21 +12,24 @@ class RecipesController < ApplicationController
     end
   end
 
-  def index
-    # @recipes = Recipe.all
 
-    # return unless params[:query].present?
+  def index
+    @recipes = Recipe.all
+    @reviews = Review.all
 
     if params[:query].present?
-      # @recipes = Recipe.where("name ILIKE ?", "%#{params[:query]}%")
-      @recipes = Recipe.search_by_name(params[:query])
-    else
-      @recipes = Recipe.all
+      @recipes = Recipe.where("name ILIKE ?", "%#{params[:query]}%")
+    end
+    respond_to do |format|
+      format.html
+      format.text {render "index", locals: {recipes: @recipes}, formats: [:html]}
     end
   end
 
   def show
     @recipe = Recipe.find(params[:id])
+    @reviews = @recipe.reviews
+    @review = Review.new
     @bookmark = Bookmark.new
   end
 
@@ -70,10 +73,12 @@ class RecipesController < ApplicationController
                                    :servings, :ingredients, :notes, :date)
   end
 
+
   def recipe_params2
   end
 
   def set_recipe
     @recipe = Recipe.find(params[:id])
+
   end
 end

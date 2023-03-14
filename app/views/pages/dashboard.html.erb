@@ -3,7 +3,7 @@
             <%# Greeting the user %>
 
  <div class="d-flex justify-content-center">
-    <h1>Hello <%= current_user.email %> </h1>
+    <h1>Hello <%= current_user.user_name%> </h1>
  </div>
 
   <div class="text- my4">
@@ -34,7 +34,7 @@
   <div class=" d-flex justify-content-around my-4 ">
 
     <div>
-    <%= link_to "Calander",calendar_path, class: " button btn  text-white rounded" %>
+    <%= link_to "Calendar",calendar_path, class: " button btn  text-white rounded" %>
     </div>
 
     <div>

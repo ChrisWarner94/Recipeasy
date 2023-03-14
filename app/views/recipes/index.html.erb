@@ -1,21 +1,25 @@
 <div class="container">
-  <div class="centered-text">
+  <div class="centered-text" data-controller="search-recipes">
     <h1 class="styling-secondary-card">Meal planning made easy</h1>
+    <div>
+      <%= form_with url: recipes_path, method: :get, html: {class:
+        "mb-4", data: {search_recipes_target: "form"}} do |f| %>
+        <%= f.text_field :query,
+                     class: "form-control",
+                     placeholder: "Type a recipe title",
+                     value: params[:query],
+                     data: {search_recipes_target: "input",
+                     action: "keyup->search-recipes#update"} %>
+      <%end%>
+      <div class="search-instructions">
+        <i class="fa-solid fa-circle-info question-styling"></i>
+        <div class="on-hover-show-card">
+          <span>You can use our search function to base your search on a recipes Name, Catergory or Ingredients.
+            Please see the help and information page for a full list of catergories</span>
+        </div>
+      </div>
   </div>
-  <div class="search-bar">
-    <%= form_with url: recipes_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a recipe"
-      %>
-      <%= f.select :diet_tag, @recipes.map {|r| r.diet_tag} %>
-      <%= submit_tag "Search", class: "submit-styling" %>
-    <% end %>
-  </div>
-  <div class="flexbox">
-  </div>
-  <div class="cards">
+  <div class="cards" data-search-recipes-target="list">
     <% @recipes.each do |recipe| %>
       <% if recipe.photo.attached? %>
         <div class="card-recipe">
@@ -26,6 +30,12 @@
             <div class="card-recipe-infos">
               <div class="recipe-title styling-primary-card">
                 <%= recipe.name %>
+                <i class=" icon-star "></i>
+                <% if recipe.rating %>
+                  <%= '⭐️' * recipe.rating %>
+                <% else %>
+                  <p>no rating yet</p>
+                <% end %>
               </div>
               <div class="recipe-details">
                 <div class="servings">
@@ -33,8 +43,8 @@
                   <i class="styling-primary-card"><%= recipe.servings %></i>
                 </div>
                 <div class="timings">
-                <i class="fa-solid fa-clock  styling-secondary-card"></i>
-                <i class="styling-primary-card"><%= recipe.prep_time %></i>
+                  <i class="fa-solid fa-clock  styling-secondary-card"></i>
+                  <i class="styling-primary-card"><%= recipe.prep_time %></i>
                 </div>
               </div>
             </div>
@@ -43,3 +53,4 @@
       <% end %>
     <% end %>
   </div>
+</div>
