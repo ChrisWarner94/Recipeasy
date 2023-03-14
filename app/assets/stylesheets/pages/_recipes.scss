@@ -30,3 +30,20 @@
   max-width: 205px;
   padding-bottom: 1rem;
 }
+
+// Recipe show page
+
+.recipe-text {
+  width: 600px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+.btn-recipe {
+  background-color: $primary-green;
+}
+
+.btn-recipe:hover {
+  background-color: $primary-green;
+}

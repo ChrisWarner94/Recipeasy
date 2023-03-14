@@ -49,8 +49,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_13_170138) do
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "start_time"
-    t.datetime "end_time"
     t.string "meal_time"
     t.index ["recipe_id"], name: "index_bookmarks_on_recipe_id"
     t.index ["user_id"], name: "index_bookmarks_on_user_id"
