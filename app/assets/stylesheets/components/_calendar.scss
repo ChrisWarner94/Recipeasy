@@ -64,32 +64,7 @@
   margin-top: 2rem;
 }
 
-.calendar-key{
-  margin-top: 2rem;
-  display: flex;
-  justify-content: right;
-  width: 34rem;
 
-  .breakfast{
-    color: blue;
-    padding-left: 1rem;
-  }
-
-  .lunch{
-    color: chartreuse;
-    padding-left: 1rem;
-  }
-
-  .dinner{
-    color: chocolate;
-    padding-left: 1rem;
-  }
-
-  .other{
-    color: darkgreen;
-    padding-left: 1rem;
-  }
-}
 
 .calendar-heading{
   display: flex;
@@ -102,4 +77,19 @@
 .bottom-info{
   display: flex;
   justify-content: space-between;
+}
+
+.nav-buttons{
+  background-color: white;
+  color: $primary-green;
+  text-decoration: none;
+  outline: $primary-green;
+  margin: 0.7rem;
+  font-size: 20px;
+}
+
+.month-display{
+  background-color: white;
+  color: $primary-green;
+  padding-top: 0.85rem;
 }
