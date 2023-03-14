@@ -19,7 +19,7 @@
   color: $primary-green;
 
   .time{
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     padding-right: 0.6rem;
     justify-content: space-between;
   }
@@ -40,33 +40,8 @@
   }
 }
 
-.bookmark-breakfast {
+.bookmark {
   background-color: lightgrey;
-  padding: 4px;
-  border-radius: 4px;
-  transition: background 0.3s ease;
-  font-size: 14px;
-  margin: 2px;
-}
-.bookmark-lunch {
-  background-color: yellowgreen;
-  padding: 4px;
-  border-radius: 4px;
-  transition: background 0.3s ease;
-  font-size: 14px;
-  margin: 2px;
-}
-.bookmark-dinner {
-  background-color: black;
-  padding: 4px;
-  border-radius: 4px;
-  transition: background 0.3s ease;
-  font-size: 14px;
-  margin: 2px;
-}
-
-.bookmark-other {
-  background-color: blue ;
   padding: 4px;
   border-radius: 4px;
   transition: background 0.3s ease;
