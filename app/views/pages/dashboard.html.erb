@@ -4,6 +4,7 @@
 
  <div class="d-flex justify-content-center">
     <h1>Hello <%= current_user.user_name%> </h1>
+
  </div>
 
   <div class="text- my4">
@@ -22,29 +23,19 @@
     <%= cl_image_tag bookmark.recipe.photo.key%>
     <div class="card-product-infos">
         <h2><%= bookmark.recipe.name %></h2>
-        <p>Meal planned for: <strong><%= bookmark.date %></strong></p>
+        <p>Meal planned for: <strong><%= bookmark.date%></strong></p>
       </div>
     </div>
-
       <% end %>
     <% end %>
   </div>
               <%# Buttons %>
 
-  <div class=" d-flex justify-content-around my-4 ">
+  <div class=" d-flex justify-content-start my-4 ">
 
     <div>
     <%= link_to "Calendar",calendar_path, class: " button btn  text-white rounded" %>
     </div>
-
-    <div>
-    <%= link_to "Shopping List", "#", class: " button btn text-white"  %>
-    </div>
-
-    <div>
-    <%= link_to "New Recipes",new_recipe_path, class: " button btn text-white" %>
-   </div>
-
   </div>
 
 </div>
