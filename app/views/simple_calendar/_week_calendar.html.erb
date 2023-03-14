@@ -2,7 +2,7 @@
   <div class=" align-items-center">
     <div class="calendar-heading my-2">
       <%= link_to t('simple_calendar.previous', default: '<'), calendar.url_for_previous_view, class: 'nav-buttons' %>
-      <span class="calendar-title month-display"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></span>
+      <span class="calendar-title month-display"><%= t('date.abbr_month_names')[start_date.month] %> <%= start_date.year %></span>
       <%= link_to t('simple_calendar.next', default: '>'), calendar.url_for_next_view, class: 'nav-buttons' %>
     </div>
   </div>
