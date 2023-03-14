@@ -3,23 +3,75 @@
     min-height: 20vh;
   }
   .today {
-    background-color: #FAF3DD;
+    background-color: white;
   }
 }
 
-.bookmark {
+.key-placement{
+ align-items: right;
+
+}
+
+.name-time{
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none !important;
+  color: $primary-green;
+
+  .time{
+    margin-top: 1rem;
+    padding-right: 0.6rem;
+    justify-content: space-between;
+  }
+}
+
+.secondary-styling{
   color: $secondary-orange;
+}
+
+.primary-styling{
+  color: $primary-green;
+}
+
+.timing{
+  display: flex;
+  .digits{
+    padding-left: 0.1rem;
+  }
+}
+
+.bookmark-breakfast {
+  background-color: lightgrey;
   padding: 4px;
   border-radius: 4px;
-  background: $primary-green;
+  transition: background 0.3s ease;
+  font-size: 14px;
+  margin: 2px;
+}
+.bookmark-lunch {
+  background-color: yellowgreen;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  font-size: 14px;
+  margin: 2px;
+}
+.bookmark-dinner {
+  background-color: black;
+  padding: 4px;
+  border-radius: 4px;
   transition: background 0.3s ease;
   font-size: 14px;
   margin: 2px;
 }
 
-.bookmark:hover {
-  background: #1BCB7F;
-  color: white;
+.bookmark-other {
+  background-color: blue ;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  font-size: 14px;
+  margin: 2px;
 }
 
 .nav-styling {
@@ -75,5 +127,4 @@
 .bottom-info{
   display: flex;
   justify-content: space-between;
-  line-height: 0;
 }

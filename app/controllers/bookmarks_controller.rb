@@ -24,6 +24,7 @@ class BookmarksController < ApplicationController
     @bookmark.destroy
     redirect_to calendar_path
   end
+  
 
   private
 
