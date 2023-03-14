@@ -22,7 +22,7 @@ class RecipesController < ApplicationController
     end
     respond_to do |format|
       format.html
-      format.text {render "index", locals: {recipes: @recipes}, formats: [:html]}
+      format.text { render partial: "search_results", locals: {recipes: @recipes}, formats: [:html] }
     end
   end
 
