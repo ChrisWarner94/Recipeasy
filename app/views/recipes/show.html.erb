@@ -58,7 +58,7 @@
     <%# created recipe %>
     <div class="d-flex justify-content-between" >
       <% if @recipe.photo.attached? %>
-        <div class="image"> <%= cl_image_tag @recipe.photo.key, height: 650, width: 650, crop: :fit %>
+        <div class="image"> <%= cl_image_tag @recipe.photo.key, height: 650, width: 650, crop: :fit, class: "rounded" %>
         <div class="text-style">
           <h2 >Add this recipe to your Calender</h2>
        </div>
@@ -68,7 +68,7 @@
       <%= simple_form_for([@recipe, @bookmark]) do |f| %>
         <%= f.input :meal_time, collection: Bookmark::MEAL_TIMES %>
         <%= f.input :notes%>
-        <%= f.input :date%>
+        <%= f.input :date, html5: true%>
         <div class="d-flex justify-content-between">
         <%= f.submit 'Add to your calender', class: "btn btn-recipe text-white" %>
         <%= link_to "Back to recipes", recipes_path, class: "btn btn-recipe text-white" %>
