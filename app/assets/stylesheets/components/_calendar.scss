@@ -3,23 +3,50 @@
     min-height: 20vh;
   }
   .today {
-    background-color: #FAF3DD;
+    background-color: white;
+  }
+}
+
+.key-placement{
+ align-items: right;
+
+}
+
+.name-time{
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none !important;
+  color: $primary-green;
+
+  .time{
+    margin-top: 1.5rem;
+    padding-right: 0.6rem;
+    justify-content: space-between;
+  }
+}
+
+.secondary-styling{
+  color: $secondary-orange;
+}
+
+.primary-styling{
+  color: $primary-green;
+}
+
+.timing{
+  display: flex;
+  .digits{
+    padding-left: 0.1rem;
   }
 }
 
 .bookmark {
-  color: $secondary-orange;
+  background-color: lightgrey;
   padding: 4px;
   border-radius: 4px;
-  background: $primary-green;
   transition: background 0.3s ease;
   font-size: 14px;
   margin: 2px;
-}
-
-.bookmark:hover {
-  background: #1BCB7F;
-  color: white;
 }
 
 .nav-styling {
@@ -37,32 +64,7 @@
   margin-top: 2rem;
 }
 
-.calendar-key{
-  margin-top: 2rem;
-  display: flex;
-  justify-content: right;
-  width: 34rem;
 
-  .breakfast{
-    color: blue;
-    padding-left: 1rem;
-  }
-
-  .lunch{
-    color: chartreuse;
-    padding-left: 1rem;
-  }
-
-  .dinner{
-    color: chocolate;
-    padding-left: 1rem;
-  }
-
-  .other{
-    color: darkgreen;
-    padding-left: 1rem;
-  }
-}
 
 .calendar-heading{
   display: flex;
@@ -75,5 +77,28 @@
 .bottom-info{
   display: flex;
   justify-content: space-between;
-  line-height: 0;
+}
+
+.nav-buttons{
+  background-color: white;
+  color: $primary-green;
+  text-decoration: none;
+  outline: $primary-green;
+  margin: 0.7rem;
+  font-size: 20px;
+}
+
+.month-display{
+  background-color: white;
+  color: $primary-green;
+  padding-top: 0.85rem;
+}
+
+.info{
+  padding-left: 2rem;
+  padding-top: 1.2rem;
+  display: flex;
+  color: $primary-green;
+  font-size: 24px;
+
 }

@@ -2,19 +2,77 @@
   <%= week_calendar(events: @bookmarks, attribute: :date) do |date, bookmarks| %>
     <%= date %>
     <% bookmarks.each do |bookmark| %>
-      <%= link_to recipe_path(bookmark.recipe) do %>
-        <div class="bookmark">
-          <p><%= bookmark.recipe.name %></p>
-          <div class="bottom-info">
-            <i class="fa-solid fa-clock  styling-secondary-card"><%= bookmark.recipe.prep_time%></i>
-            <div class="delete">
-              <%= link_to bookmark_path(bookmark),  data: { turbo_method: "delete", confirm: "Are you sure?" } do %>
-                <i class="fa-solid fa-trash"></i>
+      <%= link_to recipe_path(bookmark.recipe),  class: "text-decoration-none" do %>
+        <% if bookmark.meal_time == "breakfast" %>
+          <div class="bookmark">
+            <div class="name-time">
+              <p><%= bookmark.recipe.name %></p>
+              <div class="time">
+                <i class="fa-solid fa-clock" ><%= bookmark.recipe.prep_time %></i>
+              </div>
+            </div>
+            <div class="bottom-info">
+              <i class ="fa-solid fa-egg key-placement primary-styling"></i>
+              <div class="delete">
+                <%= link_to bookmark_path(bookmark),  data: { turbo_method: "delete", confirm: "Are you sure?" } do %>
+                  <i class="fa-solid fa-trash secondary-styling"></i>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% elsif bookmark.meal_time == "lunch" %>
+          <div class="bookmark">
+            <div class="name-time">
+              <p><%= bookmark.recipe.name %></p>
+              <div class="time">
+                <i class="fa-solid fa-clock" ><%= bookmark.recipe.prep_time %></i>
+              </div>
+            </div>
+            <div class="bottom-info">
+              <i class ="fa-solid fa-bread-slice key-placement primary-styling"></i>
+              <div class="delete">
+                <%= link_to bookmark_path(bookmark),  data: { turbo_method: "delete", confirm: "Are you sure?" } do %>
+                  <i class="fa-solid fa-trash secondary-styling"></i>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% elsif bookmark.meal_time == "dinner" %>
+          <div class="bookmark">
+            <div class="name-time">
+              <p><%= bookmark.recipe.name %></p>
+              <div class="time">
+                <i class="fa-solid fa-clock" ><%= bookmark.recipe.prep_time %></i>
+              </div>
+            </div>
+            <div class="bottom-info">
+              <i class ="fa-solid fa-utensils key-placement primary-styling"></i>
+              <div class="delete">
+                <%= link_to bookmark_path(bookmark),  data: { turbo_method: "delete", confirm: "Are you sure?" } do %>
+                  <i class="fa-solid fa-trash secondary-styling"></i>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% else %>
+          <div class="bookmark">
+            <div class="name-time">
+              <p><%= bookmark.recipe.name %></p>
+              <div class="time">
+                <i class="fa-solid fa-clock" ><%= bookmark.recipe.prep_time %></i>
+              </div>
+            </div>
+            <div class="bottom-info">
+              <i class ="fa-solid fa-egg key-placement primary-styling"></i>
+              <div class="delete">
+                <%= link_to bookmark_path(bookmark),  data: { turbo_method: "delete", confirm: "Are you sure?" } do %>
+                  <i class="fa-solid fa-trash secondary-styling"></i>
+                <% end %>
               </div>
             </div>
           </div>
         <% end %>
       <% end %>
     <% end %>
-  <%end %>
+  <% end %>
 </div>
