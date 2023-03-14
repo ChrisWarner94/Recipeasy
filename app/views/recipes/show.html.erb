@@ -60,7 +60,7 @@
       <% if @recipe.photo.attached? %>
         <div class="image"> <%= cl_image_tag @recipe.photo.key, height: 650, width: 650, crop: :fit %>
         <div class="text-style">
-          <h2 style="font-size:3vw">Add this recipe to your Calender</h2>
+          <h2 >Add this recipe to your Calender</h2>
        </div>
 <div class="container">
   <div class="row justify-content-center">
@@ -70,16 +70,16 @@
         <%= f.input :notes%>
         <%= f.input :date%>
         <div class="d-flex justify-content-between">
-        <%= f.submit 'add to your calender', class: "btn-green btn-show" %>
-        <%= link_to "go back to recipes", recipes_path, class: "show-button" %>
+        <%= f.submit 'Add to your calender', class: "btn btn-recipe text-white" %>
+        <%= link_to "Back to recipes", recipes_path, class: "btn btn-recipe text-white" %>
         </div>
 
       <% end %>
-<h3>Add review</h3>
+<h3 class="my-2">Leave a review</h3>
 <%= simple_form_for([@recipe, @review]) do |f| %>
         <%= f.input :comment %>
         <%= f.input :rating, collection: (1..5).to_a, label: "Rate your experience", input_html: {data: {controller: "star-rating"}} %>
-        <%= f.submit "Submit Review", class: "btn-green btn-show" %>
+        <%= f.submit "Submit Review", class: "btn btn-recipe text-white " %>
 <% end %>
 
     <ul class="list-group list-group-flush">
@@ -101,13 +101,13 @@
     </p>
     </i>
     <i class="fa-solid fa-user logo-margin-bottom styling-primary-card"> 4 </i> </p></p>
-        <p><strong>description</strong></p>
+        <p><strong>Description:</strong></p>
         <p> <%= @recipe.description %></p>
-        <p><strong>instruction</strong></p>
+        <p><strong>Instructions:</strong></p>
         <p><%= @recipe.instruction %></p>
         <div class="text">
 
-    <p><strong>ingredients</strong> <%= @recipe.ingredients %></p>
+    <p><strong>Ingredients:</strong> <%= @recipe.ingredients %></p>
   </div>
       </div>
     </div>
